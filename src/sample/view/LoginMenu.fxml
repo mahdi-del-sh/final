@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #4b636e;" />
+      <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #78909c;">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="141.0" layoutX="260.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-airplane-80.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="247.0" layoutY="148.0" prefHeight="39.0" prefWidth="105.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="manager">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
