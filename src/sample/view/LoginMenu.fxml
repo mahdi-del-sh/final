@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginMenuController">
    <children>
       <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #4b636e;" />
       <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #78909c;">
@@ -31,22 +31,22 @@
          </children>
       </AnchorPane>
       <Group layoutX="58.0" layoutY="166.0" />
-      <JFXButton accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="66.0" layoutY="278.0" prefHeight="80.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Passenger">
+      <JFXButton fx:id="passengerLoginBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="66.0" layoutY="278.0" prefHeight="80.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Passenger">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="363.0" layoutY="278.0" prefHeight="79.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Employee">
+      <JFXButton fx:id="employeeLoginBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="363.0" layoutY="278.0" prefHeight="79.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Employee">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="66.0" layoutY="148.0" prefHeight="79.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Manager">
+      <JFXButton fx:id="managerLoginBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="66.0" layoutY="148.0" prefHeight="79.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Manager">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="363.0" layoutY="148.0" prefHeight="79.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Super Admin">
+      <JFXButton fx:id="superadminLoginBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="363.0" layoutY="148.0" prefHeight="79.0" prefWidth="169.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Super Admin">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
