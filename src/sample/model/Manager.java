@@ -5,6 +5,7 @@ import sample.model.ShowAble;
 
 public class Manager extends Person implements ShowAble {
 
+private boolean isSuperAdmin = false;
 private int id;
 private String name;
 private String lastName;
@@ -14,6 +15,14 @@ private String phoneNumber;
 private String Address;
 private String Email;
 private double salary;
+
+    public boolean isSuperAdmin() {
+        return isSuperAdmin;
+    }
+
+    public void setSuperAdmin(boolean superAdmin) {
+        isSuperAdmin = superAdmin;
+    }
 
     public void setId(int id) {
         this.id = id;

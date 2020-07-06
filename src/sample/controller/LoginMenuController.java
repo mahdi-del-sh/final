@@ -42,7 +42,7 @@ public class LoginMenuController {
 
             superadminLoginBTN.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/superadmin/SuperAdminMenu.fxml"));
+            loader.setLocation(getClass().getResource("/sample/view/superadmin/superAdminLogIn.fxml"));
             try{
                 loader.load();
             }catch (IOException e){
@@ -51,9 +51,9 @@ public class LoginMenuController {
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setTitle("SuperAdmin Menu");
+            stage.setTitle("SuperAdmin Login");
             stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.show();
 
 
         });
@@ -62,7 +62,7 @@ public class LoginMenuController {
 
             superadminLoginBTN.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/manager/ManagerMenu.fxml"));
+            loader.setLocation(getClass().getResource("/sample/view/manager/managerLogIn.fxml"));
             try{
                 loader.load();
             }catch (IOException e){
@@ -71,9 +71,9 @@ public class LoginMenuController {
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setTitle("Manager Menu");
+            stage.setTitle("Manager Login");
             stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.show();
 
 
         });
@@ -82,7 +82,7 @@ public class LoginMenuController {
 
             superadminLoginBTN.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/employee/EmployeeMenu.fxml"));
+            loader.setLocation(getClass().getResource("/sample/view/employee/EmployeeLogIn.fxml"));
             try{
                 loader.load();
             }catch (IOException e){
@@ -91,7 +91,7 @@ public class LoginMenuController {
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setTitle("Employee Menu");
+            stage.setTitle("Employee Login");
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
@@ -100,7 +100,7 @@ public class LoginMenuController {
 
             superadminLoginBTN.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/passenger/PassengerMenu.fxml"));
+            loader.setLocation(getClass().getResource("/sample/view/passenger/PassengerLogIn.fxml"));
         try{
             loader.load();
         }catch (IOException e){
@@ -109,7 +109,7 @@ public class LoginMenuController {
 
         Parent root = loader.getRoot();
         Stage stage = new Stage();
-        stage.setTitle("Passenger Menu");
+        stage.setTitle("Passenger Login");
         stage.setScene(new Scene(root));
         stage.showAndWait();
     });

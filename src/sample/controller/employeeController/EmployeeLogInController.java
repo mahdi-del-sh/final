@@ -1,6 +1,8 @@
-package sample.controller.passengerController;
+package sample.controller.employeeController;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 
 import java.io.IOException;
 import java.net.URL;
@@ -11,7 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class PassengerMenuController {
+public class EmployeeLogInController {
 
     @FXML
     private ResourceBundle resources;
@@ -20,28 +22,22 @@ public class PassengerMenuController {
     private URL location;
 
     @FXML
-    private JFXButton HomePassengerPanelBTN;
+    private JFXButton HomeBTN;
 
     @FXML
-    private JFXButton SendMessageToManagerPassengerPanelBTN;
+    private JFXPasswordField PasswordTXF;
 
     @FXML
-    private JFXButton RegisterPassengerPanelBTN;
+    private JFXTextField UserNameTXF;
 
     @FXML
-    private JFXButton ProfileManagemantPassengerPanelBTN;
-
-    @FXML
-    private JFXButton TicketManagemantPassengerPanelBTN;
-
-    @FXML
-    private JFXButton IncreaseValidityPassengerPanelBTN;
+    private JFXButton EnterBTN;
 
     @FXML
     void initialize() {
 
-        HomePassengerPanelBTN.setOnAction(event -> {
-            HomePassengerPanelBTN.getScene().getWindow().hide();
+        HomeBTN.setOnAction(event -> {
+            HomeBTN.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/view/LoginMenu.fxml"));
             try{
@@ -55,9 +51,7 @@ public class PassengerMenuController {
             stage.setTitle("Login Menu");
             stage.setScene(new Scene(root));
             stage.show();
-
         });
-
 
     }
 }

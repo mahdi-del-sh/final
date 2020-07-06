@@ -40,7 +40,7 @@ public class SuperAdminMenuController {
         HomeSuperAdminPanelBTN.setOnAction(event -> {
             HomeSuperAdminPanelBTN.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/passenger/PassengerMenu.fxml"));
+            loader.setLocation(getClass().getResource("/sample/view/LoginMenu.fxml"));
             try{
                 loader.load();
             }catch (IOException e){
@@ -49,9 +49,9 @@ public class SuperAdminMenuController {
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setTitle("Passenger Menu");
+            stage.setTitle("Login Menu");
             stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.show();
         });
 
 

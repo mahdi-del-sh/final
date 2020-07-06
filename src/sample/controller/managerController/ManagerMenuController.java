@@ -56,7 +56,7 @@ public class ManagerMenuController {
             Stage stage = new Stage();
             stage.setTitle("Login Menu");
             stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.show();
 
 
         });
