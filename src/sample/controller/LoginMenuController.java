@@ -4,15 +4,23 @@ import com.jfoenix.controls.JFXButton;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import com.mysql.cj.jdbc.DatabaseMetaData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.Database.DatabaseHandler;
+import sample.model.Employee;
+import sample.model.Manager;
+import sample.model.Passenger;
+import sample.model.Person;
 
 public class LoginMenuController {
 
@@ -40,67 +48,46 @@ public class LoginMenuController {
 
         superadminLoginBTN.setOnAction(event -> {
 
-            superadminLoginBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/superadmin/superAdminLogIn.fxml"));
-            try{
-                loader.load();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
+            ChangeWindow(superadminLoginBTN, "/sample/view/superadmin/SuperAdminLogIn.fxml" , "SuperAdmin Login"  );
 
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("SuperAdmin Login");
-            stage.setScene(new Scene(root));
-            stage.show();
+
 
 
         });
 
         managerLoginBTN.setOnAction(event -> {
 
-            superadminLoginBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/manager/managerLogIn.fxml"));
-            try{
-                loader.load();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
+            ChangeWindow(managerLoginBTN, "/sample/view/manager/managerLogIn.fxml" , "Manager Login"  );
 
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Manager Login");
-            stage.setScene(new Scene(root));
-            stage.show();
+
 
 
         });
 
         employeeLoginBTN.setOnAction(event -> {
 
-            superadminLoginBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/employee/EmployeeLogIn.fxml"));
-            try{
-                loader.load();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
+            ChangeWindow(employeeLoginBTN, "/sample/view/employee/EmployeeLogIn.fxml" , "Employee Login"  );
 
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Employee Login");
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+
         });
 
         passengerLoginBTN.setOnAction(event -> {
 
-            superadminLoginBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/passenger/PassengerLogIn.fxml"));
+            ChangeWindow(passengerLoginBTN, "/sample/view/passenger/PassengerLogIn.fxml" , "Passenger Login"  );
+
+    });
+
+
+    }
+
+
+    // back to home method :
+
+    public void ChangeWindow(Node node , String name , String Title){
+
+        node.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource(name));
         try{
             loader.load();
         }catch (IOException e){
@@ -109,14 +96,28 @@ public class LoginMenuController {
 
         Parent root = loader.getRoot();
         Stage stage = new Stage();
-        stage.setTitle("Passenger Login");
+        stage.setTitle(Title);
         stage.setScene(new Scene(root));
-        stage.showAndWait();
-    });
-
-
-
+        stage.show();
 
     }
+
+    public void Home(Node node){
+        node.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/sample/view/LoginMenu.fxml"));
+        try{
+            loader.load();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setTitle("Login Menu");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
 }
 

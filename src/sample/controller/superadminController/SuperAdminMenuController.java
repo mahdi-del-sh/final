@@ -1,15 +1,10 @@
 package sample.controller.superadminController;
 
 import com.jfoenix.controls.JFXButton;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import sample.controller.LoginMenuController;
 
 public class SuperAdminMenuController {
 
@@ -20,41 +15,26 @@ public class SuperAdminMenuController {
     private URL location;
 
     @FXML
-    private JFXButton PersonalProfileManagementSuperAdminPanelBTN;
+    private JFXButton PersonalProfileManagementBTN;
 
     @FXML
-    private JFXButton AirportManagerManagementSuperAdminPanelBTN;
+    private JFXButton AirportManagerManagementBTN;
 
     @FXML
-    private JFXButton ReportManagementSuperAdminPanelBTN;
+    private JFXButton ReportManagementBTN;
 
     @FXML
-    private JFXButton FinancialUnitManagementSuperAdminPanelBTN;
+    private JFXButton FinancialUnitManagementSuperBTN;
 
     @FXML
-    private JFXButton HomeSuperAdminPanelBTN;
+    private JFXButton HomeBTN;
 
     @FXML
     void initialize() {
 
-        HomeSuperAdminPanelBTN.setOnAction(event -> {
-            HomeSuperAdminPanelBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/LoginMenu.fxml"));
-            try{
-                loader.load();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Login Menu");
-            stage.setScene(new Scene(root));
-            stage.show();
+        HomeBTN.setOnAction(event -> {
+            LoginMenuController loginMenuController =  new LoginMenuController();
+            loginMenuController.Home(HomeBTN);
         });
-
-
     }
 }
-

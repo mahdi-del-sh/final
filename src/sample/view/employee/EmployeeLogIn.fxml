@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.employeeController.EmployeeLogInController">
+<AnchorPane prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.employeeController.EmployeeLogInController">
    <children>
-      <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;">
+      <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;">
          <children>
             <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #4b636e;" />
             <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #78909c;">
@@ -48,11 +48,16 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="264.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
+            <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="499.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
+            <Label fx:id="ErrorLBL" alignment="CENTER" layoutX="114.0" layoutY="317.0" prefHeight="70.0" prefWidth="373.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

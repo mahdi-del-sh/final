@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controller.LoginMenuController;
 
 public class PassengerMenuController {
 
@@ -19,42 +20,33 @@ public class PassengerMenuController {
     @FXML
     private URL location;
 
-    @FXML
-    private JFXButton HomePassengerPanelBTN;
 
     @FXML
-    private JFXButton SendMessageToManagerPassengerPanelBTN;
+    private JFXButton HomeBTN;
 
     @FXML
-    private JFXButton RegisterPassengerPanelBTN;
+    private JFXButton SendMessageToManagerBTN;
 
     @FXML
-    private JFXButton ProfileManagemantPassengerPanelBTN;
+    private JFXButton RegisterBTN;
 
     @FXML
-    private JFXButton TicketManagemantPassengerPanelBTN;
+    private JFXButton ProfileManagementBTN;
 
     @FXML
-    private JFXButton IncreaseValidityPassengerPanelBTN;
+    private JFXButton TicketManagementBTN;
+
+    @FXML
+    private JFXButton IncreaseValidityBTN;
+
 
     @FXML
     void initialize() {
 
-        HomePassengerPanelBTN.setOnAction(event -> {
-            HomePassengerPanelBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/LoginMenu.fxml"));
-            try{
-                loader.load();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
+        HomeBTN.setOnAction(event -> {
 
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Login Menu");
-            stage.setScene(new Scene(root));
-            stage.show();
+LoginMenuController loginMenuController =  new LoginMenuController();
+loginMenuController.Home(HomeBTN);
 
         });
 

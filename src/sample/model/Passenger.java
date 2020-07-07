@@ -6,6 +6,7 @@ import sample.model.ShowAble;
 public class Passenger extends Person implements ShowAble {
 
 
+    private int idPassengers ;
     private int id;
     private String name;
     private String lastName;
@@ -14,6 +15,14 @@ public class Passenger extends Person implements ShowAble {
     private String phoneNumber;
     private double credit;
     private String Email;
+
+    public int getIdPassengers() {
+        return idPassengers;
+    }
+
+    public void setIdPassengers(int idPassengers) {
+        this.idPassengers = idPassengers;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -67,32 +76,32 @@ public class Passenger extends Person implements ShowAble {
 
 
     @Override
-    int getId() {
+    public int getId() {
         return 0;
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return name;
     }
 
     @Override
-    String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
     @Override
-    String getUserName() {
+    public String getUserName() {
         return userName;
     }
 
     @Override
-    String getPassword() {
+    public String getPassword() {
         return password;
     }
 
     @Override
-    String getEmail() {
+    public String getEmail() {
         return Email;
     }
 

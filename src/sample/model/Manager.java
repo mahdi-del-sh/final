@@ -5,7 +5,7 @@ import sample.model.ShowAble;
 
 public class Manager extends Person implements ShowAble {
 
-private boolean isSuperAdmin = false;
+private int idmanager;
 private int id;
 private String name;
 private String lastName;
@@ -15,12 +15,29 @@ private String phoneNumber;
 private String Address;
 private String Email;
 private double salary;
+private int isSuperAdmin = 0;
 
-    public boolean isSuperAdmin() {
+    public int getIdmanager() {
+        return idmanager;
+    }
+
+    public void setIdmanager(int idmanager) {
+        this.idmanager = idmanager;
+    }
+
+    public int getIsSuperAdmin() {
         return isSuperAdmin;
     }
 
-    public void setSuperAdmin(boolean superAdmin) {
+    public void setIsSuperAdmin(int isSuperAdmin) {
+        this.isSuperAdmin = isSuperAdmin;
+    }
+
+    public int isSuperAdmin() {
+        return isSuperAdmin;
+    }
+
+    public void setSuperAdmin(int superAdmin) {
         isSuperAdmin = superAdmin;
     }
 
@@ -89,25 +106,25 @@ private double salary;
     }
 
     @Override
-    int getId() {
+    public int getId() {
 
         return id;
 
     }
 
     @Override
-    String getName() { return name;}
+    public String getName() { return name;}
 
     @Override
-    String getLastName() {return lastName;}
+    public String getLastName() {return lastName;}
 
     @Override
-    String getUserName() { return userName;}
+    public String getUserName() { return userName;}
 
     @Override
-    String getPassword() {return password;}
+    public String getPassword() {return password;}
 
     @Override
-    String getEmail()  { return Email ;}
+    public String getEmail()  { return Email ;}
 
 }

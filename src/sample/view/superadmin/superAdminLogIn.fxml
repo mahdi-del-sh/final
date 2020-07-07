@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.superadminController.SuperAdminMenuController">
+<AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.superadminController.SuperAdminLogInController">
    <children>
       <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #4b636e;" />
       <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #78909c;">
@@ -24,14 +24,14 @@
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="354.0" layoutY="12.0" prefHeight="46.0" prefWidth="169.0" text="LogIn">
+            <Label alignment="CENTER" layoutX="354.0" layoutY="12.0" prefHeight="46.0" prefWidth="169.0" text="Login">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <JFXButton fx:id="HomeSuperAdminPanelBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="30.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
+      <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="30.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -46,10 +46,15 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="264.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
+      <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="502.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
+      <Label fx:id="ErrorLabel" alignment="CENTER" layoutX="117.0" layoutY="326.0" prefHeight="58.0" prefWidth="362.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controller.LoginMenuController;
 
 public class EmployeeMenuController {
 
@@ -19,37 +20,26 @@ public class EmployeeMenuController {
     @FXML
     private URL location;
 
-    @FXML
-    private JFXButton SendMessageToManagementEmployeePanelBTN;
 
     @FXML
-    private JFXButton PersonalProfileManagementEmployeePanelBTN;
+    private JFXButton SendMessageToManagementBTN;
 
     @FXML
-    private JFXButton FlightManagementEmployeePanelBTN;
+    private JFXButton PersonalProfileManagementBTN;
 
     @FXML
-    private JFXButton HomeEmployeePanelBTN;
+    private JFXButton FlightManagementBTN;
+
+    @FXML
+    private JFXButton HomeBTN;
 
     @FXML
     void initialize() {
 
 
-        HomeEmployeePanelBTN.setOnAction(event -> {
-            HomeEmployeePanelBTN.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/LoginMenu.fxml"));
-            try{
-                loader.load();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Login Menu");
-            stage.setScene(new Scene(root));
-            stage.show();
+        HomeBTN.setOnAction(event -> {
+            LoginMenuController loginMenuController = new LoginMenuController();
+            loginMenuController.Home(HomeBTN);
         });
 
 

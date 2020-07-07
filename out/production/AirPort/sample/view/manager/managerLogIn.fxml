@@ -38,17 +38,21 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXPasswordField fx:id="PasswordTXF" layoutX="181.0" layoutY="259.0" prefHeight="46.0" prefWidth="237.0" promptText="Enter your password">
+      <JFXPasswordField fx:id="PasswordTXF" layoutX="181.0" layoutY="237.0" prefHeight="46.0" prefWidth="237.0" promptText="Enter your password">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXPasswordField>
-      <JFXTextField fx:id="UserNameTXF" layoutX="181.0" layoutY="170.0" prefHeight="46.0" prefWidth="237.0" promptText="Enter Your UserName">
+      <JFXTextField fx:id="UserNameTXF" layoutX="181.0" layoutY="154.0" prefHeight="46.0" prefWidth="237.0" promptText="Enter Your UserName">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="260.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
+      <Label fx:id="ErrorLBL" alignment="CENTER" layoutX="120.0" layoutY="317.0" prefHeight="37.0" prefWidth="356.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="504.0" layoutY="335.0" prefHeight="37.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

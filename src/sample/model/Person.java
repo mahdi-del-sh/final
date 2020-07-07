@@ -1,6 +1,6 @@
 package sample.model;
 
-abstract class Person {
+public abstract class Person {
 
     abstract int getId();
 
