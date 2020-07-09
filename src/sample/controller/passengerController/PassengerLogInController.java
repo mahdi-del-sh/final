@@ -41,6 +41,9 @@ public class PassengerLogInController {
     private JFXTextField UserNameTXF;
 
     @FXML
+    private JFXButton RegisterBTN;
+
+    @FXML
     private JFXButton EnterBTN;
 
 
@@ -136,6 +139,10 @@ public class PassengerLogInController {
 
             }
 
+        });
+
+        RegisterBTN.setOnAction(event -> {
+            LoginMenuController loginMenuController =  new LoginMenuController();loginMenuController.ChangeWindow(RegisterBTN , "/sample/view/passenger/PassengerRegister.fxml" ,"Register Panel" );
         });
 
     }

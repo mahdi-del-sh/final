@@ -38,6 +38,8 @@ public class EmployeeLogInController {
     @FXML
     private JFXTextField UserNameTXF;
 
+    @FXML
+    private JFXButton ForgetPassBTN;
 
     @FXML
     private Label ErrorLBL;

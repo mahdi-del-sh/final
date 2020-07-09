@@ -9,25 +9,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.managerController.managerPanelController.ManagerProfileManagementController">
    <children>
-      <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;">
+      <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="626.0" style="-fx-background-color: #a7c0cd;">
          <children>
-            <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #4b636e;" />
-            <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #78909c;">
+            <AnchorPane prefHeight="30.0" prefWidth="626.0" style="-fx-background-color: #4b636e;" />
+            <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="626.0" style="-fx-background-color: #78909c;">
                <children>
-                  <ImageView fitHeight="61.0" fitWidth="58.0" layoutX="271.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="61.0" fitWidth="58.0" layoutX="284.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../assets/icons8-manager-64.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" layoutX="46.0" layoutY="12.0" prefHeight="46.0" prefWidth="193.0" text="Manager">
+                  <Label alignment="CENTER" layoutX="65.0" layoutY="12.0" prefHeight="46.0" prefWidth="193.0" text="Manager">
                      <font>
                         <Font name="System Bold" size="28.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="354.0" layoutY="12.0" prefHeight="46.0" prefWidth="169.0" text="Profile">
+                  <Label alignment="CENTER" layoutX="391.0" layoutY="12.0" prefHeight="46.0" prefWidth="169.0" text="Profile">
                      <font>
                         <Font name="System Bold" size="28.0" />
                      </font>
@@ -75,7 +74,7 @@
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="ChangePasswordBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="196.0" layoutY="336.0" prefHeight="37.0" prefWidth="207.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Change Password">
+            <JFXButton fx:id="ChangePasswordBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="209.0" layoutY="336.0" prefHeight="37.0" prefWidth="207.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Change Password">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -106,6 +105,11 @@
                </font>
             </Label>
             <Label alignment="CENTER" layoutX="30.0" layoutY="275.0" prefHeight="37.0" prefWidth="97.0" text="Email :">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="ErrorLBL" layoutX="36.0" layoutY="394.0" prefHeight="58.0" prefWidth="527.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>

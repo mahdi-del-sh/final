@@ -2,9 +2,12 @@ package sample.controller.managerController.managerPanelController;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import sample.controller.managerController.ManagerMenuController;
 
@@ -42,6 +45,10 @@ public class ManagerProfileManagementController {
 
     @FXML
     private JFXTextField EmailTXF;
+
+    @FXML
+    private Label ErrorLBL;
+
 
     @FXML
     void initialize() {

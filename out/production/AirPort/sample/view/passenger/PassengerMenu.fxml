@@ -36,30 +36,29 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="SendMessageToManagerBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="47.0" layoutY="200.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Send Message To Manager">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="RegisterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="47.0" layoutY="125.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Register">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="ProfileManagementBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="187.0" layoutY="278.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Profile Managemant">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="TicketManagementBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="328.0" layoutY="125.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Ticket Management">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="IncreaseValidityBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="328.0" layoutY="200.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Increase Validity">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
+      <Group layoutX="32.0" layoutY="130.0">
+         <children>
+            <JFXButton fx:id="SendMessageToManagerBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="15.0" layoutY="99.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Send Message To Manager">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ProfileManagementBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="15.0" layoutY="11.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Profile Managemant">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="TicketManagementBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="296.0" layoutY="11.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Ticket Management">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="IncreaseValidityBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="296.0" layoutY="99.0" prefHeight="52.0" prefWidth="226.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Increase Validity">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Group>
    </children>
 </AnchorPane>
