@@ -20,10 +20,8 @@ import sample.Database.DatabaseHandler;
 import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
 
-import javax.swing.*;
-
 public class managerLogInController {
-   static boolean username  = false;
+
 
     @FXML
     private ResourceBundle resources;
@@ -45,6 +43,9 @@ public class managerLogInController {
 
     @FXML
     private Label ErrorLBL;
+
+    static boolean username  = false;
+   public static int IdManager ;
 
     @FXML
     void initialize() {
@@ -77,15 +78,6 @@ public class managerLogInController {
             }
 
 
-
-            //*****************************************
-            //*****************************************
-            //*****************************************
-            //*****************************************
-            //*****************************************
-            //*****************************************
-
-
             else {
 
                 try {
@@ -107,9 +99,6 @@ public class managerLogInController {
                     stage.show();
 
                     }
-                    //********************
-                    //********************
-                    //********************
 
                     else {
                         if(username){
@@ -121,7 +110,6 @@ public class managerLogInController {
 
                         }
                         else{
-
 
                         Shaker shaker = new Shaker(UserNameTXF);
                         shaker.shake();
@@ -144,17 +132,9 @@ public class managerLogInController {
                     e.printStackTrace();
                 }
 
-
-
-
             }
 
-
-
-
-
         });
-
 
 
     }
@@ -169,6 +149,7 @@ public class managerLogInController {
         for(int i = 0 ; i < databaseHandler.ReadManagers().size() ; i++){
             if(databaseHandler.ReadManagers().get(i).getUserName().equals(userName) && databaseHandler.ReadManagers().get(i).getPassword().equals(Password)){
                 flag = true;
+                IdManager =   databaseHandler.ReadManagers().get(i).getIdmanager();
             }
         }
 
@@ -184,4 +165,6 @@ public class managerLogInController {
 
         return flag;
     }
+
+
 }

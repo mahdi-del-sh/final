@@ -103,4 +103,49 @@ public class DatabaseHandler extends Config {
         return  employees;
         }
 
-    }
+
+        //Update :
+    //manager :
+
+        public  void updateManagers(String firstname, String lastname ,String username ,String phone, String address , String Email , int id) throws SQLException {
+
+            String query = "UPDATE manager SET name = ? , lastname =? , username = ? , phonenumber = ? , address = ? , email = ?"
+                    + "where idmanager = ?";
+
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, firstname);
+                preparedStatement.setString(2, lastname );
+                preparedStatement.setString(3, username );
+                preparedStatement.setString(4, phone    );
+                preparedStatement.setString(5, address  );
+                preparedStatement.setString(6, Email    );
+                preparedStatement.setInt   (7, id       );
+                preparedStatement.executeUpdate();
+                preparedStatement.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public void UpdateManagerPassword(String password , int id){
+
+            String query = "UPDATE manager SET password = ?"
+                    + "where idmanager = ?";
+
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, password);
+                preparedStatement.setInt   (2, id       );
+                preparedStatement.executeUpdate();
+                preparedStatement.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+}
