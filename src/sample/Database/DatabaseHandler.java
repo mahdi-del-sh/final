@@ -146,6 +146,48 @@ public class DatabaseHandler extends Config {
             }
 
         }
+    //employee :
 
+        public void AddEmployee(String firstname , String lastname , String username , String Phone , String Address , double Salary , String Email , String Password ) throws SQLException {
+                int id = ReadEmployee().size() + 20000;
+            String insert = "INSERT INTO employee(id,name,lastname,username,password,phonenumber,address,email,salary)"+"VALUES(?,?,?,?,?,?,?,?,?)";
+            preparedStatement = connection.prepareStatement(insert);
+            preparedStatement.setInt(1    , id);
+            preparedStatement.setString(2 , firstname);
+            preparedStatement.setString(3 , lastname);
+            preparedStatement.setString(4 , username);
+            preparedStatement.setString(5 , Password);
+            preparedStatement.setString(6 , Phone);
+            preparedStatement.setString(7 , Address);
+            preparedStatement.setString(8 , Email);
+            preparedStatement.setDouble(9 , Salary);
+
+            preparedStatement.executeUpdate();
+        }
+
+    public boolean CheckUsername(String username) throws SQLException {
+        boolean flag = true;
+
+        for(int i = 0 ; i < ReadEmployee().size() ; i++){
+            if(ReadEmployee().get(i).getUserName().equalsIgnoreCase(username)){
+                flag = false;
+            }
+        }
+
+        for(int i = 0 ; i < ReadManagers().size() ; i++){
+            if(ReadManagers().get(i).getUserName().equalsIgnoreCase(username)){
+                flag = false;
+            }
+        }
+
+        for(int i = 0 ; i < ReadPassengers().size() ; i++){
+            if(ReadPassengers().get(i).getUserName().equalsIgnoreCase(username)){
+                flag = false;
+            }
+        }
+
+
+        return  flag;
+    }
 
 }

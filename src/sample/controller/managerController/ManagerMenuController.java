@@ -53,30 +53,30 @@ public class ManagerMenuController {
 
         PersonalProfileManagementBTN.setOnAction(event -> {
             LoginMenuController loginMenuController = new LoginMenuController();
-            loginMenuController.ChangeWindow(PersonalProfileManagementBTN ,"/sample/view/manager/managerPanel/ManagerProfileManagement.fxml" ,"Manager Profile Management" );
+            loginMenuController.ChangeWindow(PersonalProfileManagementBTN , "/sample/view/manager/managerPanel/managerProfileManagement/ManagerProfileManagement.fxml","Manager Profile Management" );
         });
 
         EmployeeManagementBTN.setOnAction(event -> {
             LoginMenuController loginMenuController = new LoginMenuController();
-loginMenuController.ChangeWindow(EmployeeManagementBTN ,"/sample/view/manager/managerPanel/ManagerEmployeeManagement.fxml" , "Employee Management" );
+loginMenuController.ChangeWindow(EmployeeManagementBTN , "/sample/view/manager/managerPanel/managerEmployeeManagement/ManagerEmployeeManagement.fxml", "Employee Management" );
         });
 
         FlightAndPlaneManagementBTN.setOnAction(event -> {
             LoginMenuController loginMenuController = new LoginMenuController();
-            loginMenuController.ChangeWindow(EmployeeManagementBTN ,"/sample/view/manager/managerPanel/ManagerFlightAndPlaneManagement.fxml" , "Flight and Plane Management" );
+            loginMenuController.ChangeWindow(EmployeeManagementBTN , "/sample/view/manager/managerPanel/managerFlightManagement/ManagerFlightAndPlaneManagement.fxml", "Flight and Plane Management" );
 
         });
 
 
         MessageManagementBTN.setOnAction(event -> {
             LoginMenuController loginMenuController = new LoginMenuController();
-            loginMenuController.ChangeWindow(EmployeeManagementBTN ,"/sample/view/manager/managerPanel/ManagerMessageManagement.fxml" , "Messages Management" );
+            loginMenuController.ChangeWindow(EmployeeManagementBTN , "/sample/view/manager/managerPanel/managerMessageManagement/ManagerMessageManagement.fxml", "Messages Management" );
 
         });
 
         PassengerManagementBTN.setOnAction(event -> {
             LoginMenuController loginMenuController = new LoginMenuController();
-            loginMenuController.ChangeWindow(EmployeeManagementBTN ,"/sample/view/manager/managerPanel/ManagerPassengerManagement.fxml" , "Passenger Management" );
+            loginMenuController.ChangeWindow(EmployeeManagementBTN , "/sample/view/manager/managerPanel/managerPassengerManagement/ManagerPassengerManagement.fxml", "Passenger Management" );
         });
 
 
