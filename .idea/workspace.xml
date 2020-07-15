@@ -2,54 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/EditEmployeeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/EngageEmployeeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/FireEmployeeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerEmployeeManagementController/ManagerEmployeeManagementController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerPassengerManagementController/ManagerPassengerManagementController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerProfileManagementController/ManagerProfileManagementController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EngageEmployee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/FireEmployee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EditEmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EngageEmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/FireEmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerEmployeeManagementController/ManagerEmployeeManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EngageEmployee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/FireEmployee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/EnterUsernameEmployeeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/ManagerChangeEmployeePasswordController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EnterUsernameEmployee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/ManagerChangeEmployeePassword.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EnterUsernameEmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/ManagerChangeEmployeePasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EnterUsernameEmployee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/ManagerChangeEmployeePassword.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/Database/DatabaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/Database/DatabaseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/ManagerMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/ManagerMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/ManagerChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerProfileController/ManagerChangePasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/ManagerEmployeeManagementController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/ManagerFlightAndPlaneManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerFlightManagementController/ManagerFlightAndPlaneManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/ManagerMessageManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerMessageManagementController/ManagerMessageManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/ManagerPassengerManagementController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/ManagerProfileManagementController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/ManagerChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerProfile/ManagerChangePassword.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/ManagerEmployeeManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/managerEmployeeManagement/ManagerEmployeeManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/ManagerFlightAndPlaneManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/managerFlightManagement/ManagerFlightAndPlaneManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/ManagerMessageManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/managerMessageManagement/ManagerMessageManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/ManagerPassengerManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/managerPassengerManagement/ManagerPassengerManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/ManagerProfileManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/managerProfileManagement/ManagerProfileManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/EditEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/EditEmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/FireEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerEmployeeManagementController/FireEmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerEmployeeManagementController/ManagerEmployeeManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerPanelController/managerEmployeeManagementController/ManagerEmployeeManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerProfileController/ManagerChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/managerController/managerProfileController/ManagerChangePasswordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/model/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EngageEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/EngageEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/FireEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerEmployeeManagement/FireEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerProfile/ManagerChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerProfile/ManagerChangePassword.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Database/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Database/DatabaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/LoginMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/ManagerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/ManagerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/ManagerChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerProfileController/ManagerChangePasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/ManagerEmployeeManagementController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/ManagerFlightAndPlaneManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerFlightManagementController/ManagerFlightAndPlaneManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/ManagerMessageManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerMessageManagementController/ManagerMessageManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/ManagerPassengerManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerPassengerManagementController/ManagerPassengerManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/ManagerProfileManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerProfileManagementController/ManagerProfileManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/ManagerChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerProfile/ManagerChangePassword.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/ManagerEmployeeManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/managerEmployeeManagement/ManagerEmployeeManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/ManagerFlightAndPlaneManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/managerFlightManagement/ManagerFlightAndPlaneManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/ManagerMessageManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/managerMessageManagement/ManagerMessageManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/ManagerPassengerManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/managerPassengerManagement/ManagerPassengerManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerPanel/ManagerProfileManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/managerPanel/managerProfileManagement/ManagerProfileManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EditEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EditEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EngageEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/EngageEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/FireEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerEmployeeManagementController/FireEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerEmployeeManagementController/ManagerEmployeeManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerPanelController/managerEmployeeManagementController/ManagerEmployeeManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/managerController/managerProfileController/ManagerChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/managerController/managerProfileController/ManagerChangePasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EngageEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/EngageEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/FireEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerEmployeeManagement/FireEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/managerProfile/ManagerChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/managerProfile/ManagerChangePassword.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +124,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my codes/java/Lambda" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2229885" />
@@ -290,7 +272,9 @@
       <workItem from="1594059239496" duration="18482000" />
       <workItem from="1594189613407" duration="27906000" />
       <workItem from="1594362211477" duration="3695000" />
-      <workItem from="1594559360629" duration="32287000" />
+      <workItem from="1594559360629" duration="32636000" />
+      <workItem from="1594748072752" duration="3509000" />
+      <workItem from="1594752611184" duration="7761000" />
     </task>
     <servers />
   </component>
@@ -326,54 +310,54 @@
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594190947246" />
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594054776855" />
-    <state x="348" y="83" key="FileChooserDialogImpl" timestamp="1594720318853">
+    <state x="348" y="83" key="FileChooserDialogImpl" timestamp="1594749181149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="83" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594720318853" />
+    <state x="348" y="83" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594749181149" />
     <state x="348" y="83" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594362246917" />
-    <state width="37" height="553" key="GridCell.Tab.0.bottom" timestamp="1594725025370">
+    <state width="474" height="553" key="GridCell.Tab.0.bottom" timestamp="1594800150099">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="37" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725025370" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594028965366" />
+    <state width="474" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594800150099" />
+    <state width="37" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594752542460" />
     <state width="37" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="37" height="553" key="GridCell.Tab.0.center" timestamp="1594725025369">
+    <state width="474" height="553" key="GridCell.Tab.0.center" timestamp="1594800150099">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="37" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725025369" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594028965366" />
+    <state width="474" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594800150099" />
+    <state width="37" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594752542460" />
     <state width="37" height="553" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="37" height="553" key="GridCell.Tab.0.left" timestamp="1594725025369">
+    <state width="474" height="553" key="GridCell.Tab.0.left" timestamp="1594800150099">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="37" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725025369" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594028965366" />
+    <state width="474" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594800150099" />
+    <state width="37" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594752542459" />
     <state width="37" height="553" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="37" height="553" key="GridCell.Tab.0.right" timestamp="1594725025369">
+    <state width="474" height="553" key="GridCell.Tab.0.right" timestamp="1594800150099">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="37" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725025369" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594028965366" />
+    <state width="474" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594800150099" />
+    <state width="37" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594752542460" />
     <state width="37" height="553" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1594710915459">
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1594725371361">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594710915459" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725371361" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594013567699" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1594710915458">
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1594725371361">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594710915458" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725371361" />
     <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1594013567699" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1594710915458">
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1594725371361">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594710915458" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725371361" />
     <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1594013567699" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1594710915458">
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1594725371361">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594710915458" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594725371361" />
     <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1594013567699" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1594059335662">
       <screen x="0" y="0" width="1280" height="680" />
@@ -384,14 +368,15 @@
     </state>
     <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594278784423" />
     <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1593849235170" />
-    <state x="1920" y="0" width="1213" height="665" maximized="true" key="dock-window-1" timestamp="1594660103971">
+    <state x="1920" y="55" width="1213" height="665" maximized="true" key="dock-window-1" timestamp="1594796672511">
       <screen x="1920" y="0" width="1280" height="680" />
     </state>
-    <state x="1920" y="0" width="1213" height="665" maximized="true" key="dock-window-1/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594660103971" />
-    <state x="-250" y="-13" width="1213" height="665" maximized="true" key="dock-window-2" timestamp="1594660160485">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="1920" y="55" width="1213" height="665" maximized="true" key="dock-window-1/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594796672511" />
+    <state x="-24" y="145" width="1213" height="665" maximized="true" key="dock-window-1/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594751647039" />
+    <state x="1920" y="0" width="1251" height="665" maximized="true" key="dock-window-2" timestamp="1594799708277">
+      <screen x="1920" y="0" width="1280" height="680" />
     </state>
-    <state x="-250" y="-13" width="1213" height="665" maximized="true" key="dock-window-2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594660160485" />
+    <state x="1920" y="0" width="1251" height="665" maximized="true" key="dock-window-2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594799708277" />
     <state x="1920" y="79" width="937" height="665" maximized="true" key="dock-window-3" timestamp="1594138166442">
       <screen x="1920" y="0" width="1280" height="680" />
     </state>

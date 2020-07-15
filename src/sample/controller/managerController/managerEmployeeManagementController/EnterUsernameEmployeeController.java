@@ -12,10 +12,8 @@ import javafx.scene.paint.Paint;
 import sample.Database.DatabaseHandler;
 import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
-import sample.model.Employee;
 
-public class FireEmployeeController {
-
+public class EnterUsernameEmployeeController {
 
     @FXML
     private JFXButton HomeBTN;
@@ -27,39 +25,28 @@ public class FireEmployeeController {
     private Label ErrorLBL;
 
     @FXML
-    private JFXButton FireBTN;
-
+    private JFXButton NextBTN;
+    static int id ;
     LoginMenuController loginMenuController = new LoginMenuController();
 
-    static int id;
+
     @FXML
     void initialize() {
 
-       UserNameTXF.setUnFocusColor(Paint.valueOf("#4059a9"));
-
-        HomeBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/managerPanel/managerEmployeeManagement/ManagerEmployeeManagement.fxml" , "Employee management");
-        });
-
-        FireBTN.setOnAction(event -> {
+        NextBTN.setOnAction(event -> {
             UserNameTXF.setUnFocusColor(Paint.valueOf("#4059a9"));
 
             if(UserNameTXF.getText().equalsIgnoreCase("")){
-                ErrorLBL.setText("Enter the Username");
+                ErrorLBL.setText("Please Enter the Username");
             }
-            else{
+            else {
                 try {
-                    if(CheckUserName(UserNameTXF.getText())){
+                    if(CheckUserName()){
 
-                        DatabaseHandler databaseHandler = new DatabaseHandler();
-                        Connection connection ;
-                        connection = databaseHandler.getConnection();
-                        databaseHandler.DeleteEmployee(id);
-                        ErrorLBL.setText("Employee has been fired successfully");
-
+                        loginMenuController.ChangeWindow(NextBTN , "/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" , "Edit Employee");
                     }
                     else {
-                        ErrorLBL.setText("Cant find the username");
+                        ErrorLBL.setText("Username not found");
                         Shaker shaker1 = new Shaker(UserNameTXF);
                         shaker1.shake();
                         UserNameTXF.setUnFocusColor(Paint.valueOf("#d50000"));
@@ -72,25 +59,26 @@ public class FireEmployeeController {
             }
         });
 
+        HomeBTN.setOnAction(event -> {
+            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/managerPanel/managerEmployeeManagement/ManagerEmployeeManagement.fxml" , "Employee management");
+
+        });
     }
 
-    private boolean CheckUserName(String text) throws SQLException, ClassNotFoundException {
-        boolean flag = false ;
+    private boolean CheckUserName() throws SQLException, ClassNotFoundException {
+        boolean flag = false;
 
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection ;
         connection = databaseHandler.getConnection();
 
-        databaseHandler.ReadEmployee();
-
-        for (Employee employee : databaseHandler.ReadEmployee()) {
-            if(employee.getUserName().equals(text)){
-               id =  employee.getIdEmployee();
-                flag = true ;
+        for(int i = 0 ; i < databaseHandler.ReadEmployee().size() ; i++){
+            if(databaseHandler.ReadEmployee().get(i).getUserName().equals(UserNameTXF.getText())){
+                flag = true;
+                id = databaseHandler.ReadEmployee().get(i).getIdEmployee();
             }
         }
+
         return flag;
     }
-
-
 }

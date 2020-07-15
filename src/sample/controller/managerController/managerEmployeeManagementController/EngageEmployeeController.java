@@ -185,7 +185,7 @@ public class EngageEmployeeController {
                         if(databaseHandler.CheckUsername(UsernameTXF.getText())){
 
                             databaseHandler.AddEmployee(FirstNameTXF.getText() , LastnameTXF.getText() , UsernameTXF.getText() , PhoneTXF.getText() , AddressTXF.getText() , Double.valueOf(SalaryTXF.getText()) , EmailTXF.getText() , PasswordTXF.getText());
-                            
+
                         }
                         else{
                             UserNameLBL.setText("This Username is taken choose another one");

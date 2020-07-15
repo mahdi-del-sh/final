@@ -1,13 +1,14 @@
-package sample.controller.managerController.managerProfileController;
+package sample.controller.managerController.managerEmployeeManagementController;
 
 import com.jfoenix.controls.JFXButton;
-
+import com.jfoenix.controls.JFXTextField;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Paint;
@@ -16,8 +17,7 @@ import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
 import sample.controller.managerController.managerLogInController;
 
-public class ManagerChangePasswordController {
-
+public class ManagerChangeEmployeePasswordController {
 
     @FXML
     private JFXButton HomeBTN;
@@ -43,6 +43,10 @@ public class ManagerChangePasswordController {
         ErrorLBL.setText("");
 
 
+        HomeBTN.setOnAction(event -> {
+            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml", "Profile Management");
+        });
+
         ConfirmBTN.setOnAction(event -> {
 
             if(PasswordTXF.getText().equalsIgnoreCase("") && ConfirmPasswordTXF.getText().equalsIgnoreCase("")){
@@ -59,6 +63,7 @@ public class ManagerChangePasswordController {
                 ConfirmPasswordTXF.setUnFocusColor(Paint.valueOf("#d50000"));
 
             }
+
             else if(!PasswordTXF.getText().equalsIgnoreCase("") && ConfirmPasswordTXF.getText().equalsIgnoreCase("")){
                 ErrorLBL.setText("please Confirm the password");
 
@@ -76,15 +81,14 @@ public class ManagerChangePasswordController {
 
                 PasswordTXF.setUnFocusColor(Paint.valueOf("#d50000"));
 
-            }
-            else{
+            } else {
 
-                if(PasswordTXF.getText().equals(ConfirmPasswordTXF.getText())){
+                if (PasswordTXF.getText().equals(ConfirmPasswordTXF.getText())) {
 
-                    if(CheckPass(PasswordTXF.getText())){
+                    if (CheckPass(PasswordTXF.getText())) {
 
                         DatabaseHandler databaseHandler = new DatabaseHandler();
-                        Connection connection ;
+                        Connection connection;
                         try {
                             connection = databaseHandler.getConnection();
                         } catch (ClassNotFoundException e) {
@@ -93,15 +97,15 @@ public class ManagerChangePasswordController {
                             e.printStackTrace();
                         }
                         managerLogInController managerLogInController1 = new managerLogInController();
+                        EnterUsernameEmployeeController enterUsernameEmployeeController = new EnterUsernameEmployeeController();
 
-                        databaseHandler.UpdateManagerPassword(PasswordTXF.getText() ,managerLogInController1.IdManager );
+                        databaseHandler.UpdateEmployeePassword(PasswordTXF.getText(), enterUsernameEmployeeController.id);
 
                         ErrorLBL.setText("Password Changed Successfully");
 
                     }
 
-                }
-                else{
+                } else {
                     Shaker shaker1 = new Shaker(PasswordTXF);
                     Shaker shaker2 = new Shaker(ConfirmPasswordTXF);
 
@@ -117,15 +121,12 @@ public class ManagerChangePasswordController {
 
             }
 
-
         });
 
-        HomeBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/managerPanel/managerProfileManagement/ManagerProfileManagement.fxml", "Profile Management");
-        });
 
 
     }
+
     public boolean CheckPass(String password){
         boolean flag = false;
         Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
@@ -141,7 +142,7 @@ public class ManagerChangePasswordController {
             flag = true;
         }
 
-return flag;
+        return flag;
     }
 
 }

@@ -39,7 +39,7 @@ public class ManagerEmployeeManagementController {
         });
 
         EditEmployeeBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(EditEmployeeBTN , "/sample/view/manager/managerEmployeeManagement/EditEmployee.fxml" , "Edit Employee");
+            loginMenuController.ChangeWindow(EditEmployeeBTN , "/sample/view/manager/managerEmployeeManagement/EnterUsernameEmployee.fxml" , "Edit Employee");
         });
     }
 }

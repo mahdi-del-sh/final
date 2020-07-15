@@ -190,4 +190,64 @@ public class DatabaseHandler extends Config {
         return  flag;
     }
 
+    public void DeleteEmployee(int id){
+        String query = "DELETE FROM employee where idemployee  = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, id);
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void UpdateEmployeePassword(String password , int id){
+
+        String query = "UPDATE employee SET password = ?"
+                + "where idemployee = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, password);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+
+    public void updateEmployee(String firstname , String lastname , String username , String Phone , String Address , double Salary , String Email , int id)throws SQLException{
+
+        String query = "UPDATE employee SET name = ? , lastname = ? , username = ? , phonenumber = ? , address = ? , email = ? , salary = ?"
+                + "where idemployee = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, firstname);
+            preparedStatement.setString(2, lastname );
+            preparedStatement.setString(3, username );
+            preparedStatement.setString(4, Phone    );
+            preparedStatement.setString(5, Address  );
+            preparedStatement.setString(6, Email    );
+            preparedStatement.setDouble(7 , Salary  );
+            preparedStatement.setInt   (8, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

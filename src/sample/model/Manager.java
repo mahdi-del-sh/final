@@ -1,8 +1,5 @@
 package sample.model;
 
-import sample.model.Person;
-import sample.model.ShowAble;
-
 public class Manager extends Person implements ShowAble {
 
 private int idmanager;

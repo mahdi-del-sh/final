@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.managerController.managerEmployeeManagementController.FireEmployeeController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
@@ -47,7 +46,7 @@
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </JFXTextField>
-                  <Label fx:id="ErrorLBL" alignment="CENTER" layoutX="122.0" layoutY="223.0" prefHeight="84.0" prefWidth="356.0">
+                  <Label fx:id="ErrorLBL" alignment="CENTER" layoutX="122.0" layoutY="223.0" prefHeight="84.0" prefWidth="356.0" textFill="#d70000">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
