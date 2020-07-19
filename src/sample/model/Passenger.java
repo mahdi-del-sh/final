@@ -15,6 +15,15 @@ public class Passenger extends Person implements ShowAble {
     private String phoneNumber;
     private double credit;
     private String Email;
+    private int flightid ;
+
+    public int getFlightid() {
+        return flightid;
+    }
+
+    public void setFlightid(int flightid) {
+        this.flightid = flightid;
+    }
 
     public int getIdPassengers() {
         return idPassengers;

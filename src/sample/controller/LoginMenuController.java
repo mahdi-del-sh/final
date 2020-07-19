@@ -4,31 +4,16 @@ import com.jfoenix.controls.JFXButton;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import com.mysql.cj.jdbc.DatabaseMetaData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.Database.DatabaseHandler;
-import sample.model.Employee;
-import sample.model.Manager;
-import sample.model.Passenger;
-import sample.model.Person;
 
 public class LoginMenuController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private JFXButton passengerLoginBTN;
@@ -57,7 +42,7 @@ public class LoginMenuController {
 
         managerLoginBTN.setOnAction(event -> {
 
-            ChangeWindow(managerLoginBTN, "/sample/view/manager/managerLogIn.fxml" , "Manager Login"  );
+            ChangeWindow(managerLoginBTN, "/sample/view/manager/login.fxml", "Manager Login"  );
 
 
 

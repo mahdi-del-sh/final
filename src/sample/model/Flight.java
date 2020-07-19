@@ -7,47 +7,47 @@ import java.util.logging.Level;
 
 public class Flight  implements ShowAble {
 
-   public enum FlightStatus{
-        flying,
-        done,
-        undone
+    public enum FlightStatus{
+        flying, //0
+        done,   //1
+        undone  //2
     }
 
-
     private int Id;
-    private Airplane airplane ;
-    private Ticket ticket;
+    private int airplaneId ;
+    private int ticketId;
     private String Origin;
     private String Destination;
     private String FlightsDate;
     private String FlightsTime;
     private int Sold_Tickets_Number;
-    private ArrayList<Passenger> PassengersList = new ArrayList<>();
     private double FlightDuration ;
     private FlightStatus flightStatus ;
+    private ArrayList<Passenger> PassengersList = new ArrayList<>();
 
-    public int getId() {
-        return Id;
-    }
 
     public void setId(int id) {
         Id = id;
     }
 
-    public Airplane getAirplane() {
-        return airplane;
+    public int getTicketId() {
+        return ticketId;
     }
 
-    public void setAirplane(Airplane airplane) {
-        this.airplane = airplane;
+    public void setTicketId(int ticket) {
+        this.ticketId = ticket;
     }
 
-    public Ticket getTicket() {
-        return ticket;
+    public int getAirplaneId() {
+        return airplaneId;
     }
 
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
+    public void setAirplaneId(int airplaneId) {
+        this.airplaneId = airplaneId;
+    }
+
+    public int getId() {
+        return Id;
     }
 
     public String getOrigin() {
@@ -110,8 +110,8 @@ public class Flight  implements ShowAble {
         return PassengersList;
     }
 
-    public void setPassengersList(ArrayList<Passenger> passengersList) {
-        PassengersList = passengersList;
+    public void AddPassengersList( Passenger passenger) {
+        PassengersList.add(passenger);
     }
 
     public void show(){}
@@ -119,8 +119,8 @@ public class Flight  implements ShowAble {
     public void Show(Flight flight){
 
         System.out.println("id:              "+flight.getId());
-        System.out.println("Airplane         "+flight.getAirplane());
-        System.out.println("Ticket           "+flight.getTicket());
+        System.out.println("Airplane         "+flight.getAirplaneId());
+        System.out.println("Ticket           "+flight.getTicketId());
         System.out.println("Origin           "+flight.getOrigin());
         System.out.println("Destination      "+flight.getDestination());
         System.out.println("FlightDate       "+flight.getFlightsDate());

@@ -6,10 +6,18 @@ import java.util.ArrayList;
 
 public class Airplane implements ShowAble {
 
+    private int idplane ;
     private int id;
     private int  number_of_seats;
     private ArrayList<Flight> FlightLists = new ArrayList<>();
 
+    public int getIdplane() {
+        return idplane;
+    }
+
+    public void setIdplane(int idplane) {
+        this.idplane = idplane;
+    }
 
     public int getId() {
         return id;
@@ -31,8 +39,8 @@ public class Airplane implements ShowAble {
         return FlightLists;
     }
 
-    public void setFlightLists(ArrayList<Flight> flightLists) {
-        FlightLists = flightLists;
+    public void addFlightLists(Flight flight) {
+        FlightLists.add(flight);
     }
 
     public void show(){}
