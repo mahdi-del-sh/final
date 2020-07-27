@@ -17,19 +17,7 @@ public class Panel {
     private JFXButton ViewPlaneBTN;
 
     @FXML
-    private JFXButton DeletePlaneBTN;
-
-    @FXML
-    private JFXButton EditPlaneBTN;
-
-    @FXML
     private JFXButton AddFlightBTN;
-
-    @FXML
-    private JFXButton DeleteFlightBTN;
-
-    @FXML
-    private JFXButton EditFlightBTN;
 
     @FXML
     private JFXButton ViewFlightBTN;
@@ -56,14 +44,6 @@ public class Panel {
          loginMenuController.ChangeWindow(ViewPlaneBTN , "/sample/view/manager/FlightAndPlane/Plane/View/View.fxml" , "View Plane");
      });
 
-     EditPlaneBTN.setOnAction(event -> {
-         loginMenuController.ChangeWindow(EditPlaneBTN , "/sample/view/manager/FlightAndPlane/Plane/Edit/Edit.fxml" , "Edit Plane");
-     });
-
-     DeletePlaneBTN.setOnAction(event -> {
-         loginMenuController.ChangeWindow(DeletePlaneBTN , "/sample/view/manager/FlightAndPlane/Plane/Delete/Delete.fxml" , "Delete Plane");
-     });
-
      //flight :
 
 
@@ -73,14 +53,6 @@ public class Panel {
 
         ViewFlightBTN.setOnAction(event -> {
             loginMenuController.ChangeWindow(ViewFlightBTN , "/sample/view/manager/FlightAndPlane/Flight/View/View.fxml" , "View Flight");
-        });
-
-        EditFlightBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(EditFlightBTN , "/sample/view/manager/FlightAndPlane/Flight/Edit/Edit.fxml" , "Edit Flight");
-        });
-
-        DeleteFlightBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(DeleteFlightBTN , "/sample/view/manager/FlightAndPlane/Flight/Delete/Delete.fxml" , "Delete Flight");
         });
 
     }

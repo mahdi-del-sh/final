@@ -10,6 +10,32 @@ public class Airplane implements ShowAble {
     private int id;
     private int  number_of_seats;
     private ArrayList<Flight> FlightLists = new ArrayList<>();
+    private String FlightListString = "" ;
+
+
+    public Airplane() {
+        SetFlightListString();
+    }
+
+    public void SetFlightListString(){
+
+        for (int i = 0 ; i < FlightLists.size() ; i++){
+            FlightListString += FlightLists.get(i).getId() + "  ";
+        }
+    }
+
+    public String GetFlightListString(){
+        return FlightListString;
+    }
+
+    public String getFlightListString() {
+        return FlightListString;
+    }
+
+    public int getFlightListSize(){
+        return FlightLists.size();
+    }
+
 
     public int getIdplane() {
         return idplane;

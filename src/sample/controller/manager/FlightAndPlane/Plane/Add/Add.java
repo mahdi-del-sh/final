@@ -4,7 +4,9 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Paint;
 import sample.Database.DatabaseHandler;
+import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
 
 import javax.swing.*;
@@ -36,29 +38,41 @@ public class Add {
         });
 
         AddBTN.setOnAction(event -> {
+            CapacityTXF.setUnFocusColor(Paint.valueOf("#4059a9"));
 
-            if(CheckCapacity()){
+            if(!CapacityTXF.getText().equalsIgnoreCase("")) {
 
-                DatabaseHandler databaseHandler = new DatabaseHandler();
-                Connection connection;
-                try {
-                    connection = databaseHandler.getConnection();
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                } catch (SQLException e) {
-                    e.printStackTrace();
+                if (CheckCapacity()) {
+
+                    DatabaseHandler databaseHandler = new DatabaseHandler();
+                    Connection connection;
+                    try {
+                        connection = databaseHandler.getConnection();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        databaseHandler.AddPlane(Integer.parseInt(CapacityTXF.getText()));
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
+                    ErrorLBL.setText("Plane Added successfully");
+
                 }
+            }
 
-                try {
-                    databaseHandler.AddPlane(Integer.parseInt(CapacityTXF.getText()));
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-
-                ErrorLBL.setText("Plane Added successfully");
-
+            else {
+                ErrorLBL.setText("Enter the Capacity");
+                Shaker shaker1 = new Shaker(CapacityTXF);
+                shaker1.shake();
+                CapacityTXF.setUnFocusColor(Paint.valueOf("#d50000"));
             }
         });
+
     }
 
     public boolean CheckCapacity(){
@@ -69,6 +83,9 @@ public class Add {
 
         if(!FirstNameFound){
             ErrorLBL.setText("You Should Enter Just Number");
+            Shaker shaker1 = new Shaker(CapacityTXF);
+            shaker1.shake();
+            CapacityTXF.setUnFocusColor(Paint.valueOf("#d50000"));
         }
 
         if(Integer.parseInt(CapacityTXF.getText()) > 0 && Integer.parseInt(CapacityTXF.getText()) < 400){
@@ -76,6 +93,9 @@ public class Add {
         }
         else {
             ErrorLBL.setText("The Capacity Should Between 0 to 400");
+            Shaker shaker1 = new Shaker(CapacityTXF);
+            shaker1.shake();
+            CapacityTXF.setUnFocusColor(Paint.valueOf("#d50000"));
         }
 
         if(flag && FirstNameFound){

@@ -103,6 +103,7 @@ public class DatabaseHandler extends Config {
     public ArrayList<Flight> ReadFlights() throws SQLException{
 
         ArrayList<Flight> flights = new ArrayList<>();
+
         String query = "SELECT * from flight";
 
         preparedStatement = connection.prepareStatement(query);
@@ -138,6 +139,8 @@ public class DatabaseHandler extends Config {
                 flight.AddPassengersList(passengerList(resultSet.getInt(2)).get(i));
             }
 
+            flights.add(flight);
+
             }
 
         return flights;
@@ -161,6 +164,9 @@ public class DatabaseHandler extends Config {
             for(int i = 0 ; i < flightList(resultSet.getInt(2)).size() ; i++ ){
                 plane.addFlightLists(flightList(resultSet.getInt(2)).get(i));
             }
+
+            plane.SetFlightListString();
+
 
             planes.add(plane);
         }
@@ -302,7 +308,7 @@ public class DatabaseHandler extends Config {
 
     }
 
-    public void UpdatePlane(int capacity , int id){
+    public void UpdatePlane(int id , int capacity){
 
         String query = "UPDATE plane SET number_of_seats = ? "
                 + "where idplane = ?";
@@ -311,6 +317,7 @@ public class DatabaseHandler extends Config {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, capacity);
             preparedStatement.setInt(2, id );
+            preparedStatement.executeUpdate();
             preparedStatement.close();
 
         } catch (SQLException e) {
