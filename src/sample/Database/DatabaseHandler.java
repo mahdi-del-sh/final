@@ -68,6 +68,7 @@ public class DatabaseHandler extends Config {
         passenger.setPhoneNumber(resultSet.getString(7));
         passenger.setCredit(resultSet.getDouble(8));
         passenger.setEmail(resultSet.getString(9));
+        passenger.setFlightid(resultSet.getInt(10));
             passengers.add(passenger);
         }
         return passengers;
@@ -138,7 +139,8 @@ public class DatabaseHandler extends Config {
             for (int i= 0 ; i < passengerList(resultSet.getInt(2)).size() ; i++){
                 flight.AddPassengersList(passengerList(resultSet.getInt(2)).get(i));
             }
-
+            flight.SetPassengerListString();
+            flight.setStatus();
             flights.add(flight);
 
             }
@@ -433,7 +435,7 @@ tickets.add(ticket);
     public void UpdateFlight(int planeId , int ticketId , String origin , String destination , String flightsDate , String flightsTime , int sold_ticket_number , Double flightDuration , Flight.FlightStatus flightStatus , int id){
 
         String query = "UPDATE flight SET airplaneId = ? , ticketId = ? , origin = ? , destination = ? , flightsDate = ? ,  flightsTime = ? , sold_ticket_number = ? , flightDuration = ? , flightStatus = ? "
-                + "where idflight = ?";
+                + "where id = ?";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -469,7 +471,7 @@ tickets.add(ticket);
 
     public void DeleteFlight(int id) {
 
-        String query = "DELETE FROM flight where idflight  = ?";
+        String query = "DELETE FROM flight where id  = ?";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);

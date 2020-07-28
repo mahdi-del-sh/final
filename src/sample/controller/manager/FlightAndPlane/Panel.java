@@ -1,17 +1,8 @@
 package sample.controller.manager.FlightAndPlane;
 
 import com.jfoenix.controls.JFXButton;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import sample.controller.LoginMenuController;
-import sample.controller.manager.FlightAndPlane.Flight.Delete.Delete;
 import sample.controller.manager.menu;
 
 public class Panel {

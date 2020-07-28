@@ -15,8 +15,6 @@ public class Flight  implements ShowAble {
 
     private int Id;
     private int idflight;
-
-
     private int airplaneId ;
     private int ticketId;
     private String Origin;
@@ -26,7 +24,54 @@ public class Flight  implements ShowAble {
     private int Sold_Tickets_Number;
     private double FlightDuration ;
     private FlightStatus flightStatus ;
+    private String status  = "";
+    private String PassengerListString = "" ;
     private ArrayList<Passenger> PassengersList = new ArrayList<>();
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus() {
+        if(flightStatus.equals(FlightStatus.flying)){
+            status = "flying";
+    }
+
+        else if(flightStatus.equals(FlightStatus.done)){
+            status = "done";
+        }
+
+        else if(flightStatus.equals(FlightStatus.undone)){
+            status = "undone";
+        }
+    }
+
+    public void SetStatus(String s){
+        this.status = s;
+
+        if(s.equalsIgnoreCase("flying")){
+            flightStatus = FlightStatus.flying;
+        }
+
+        else if(s.equalsIgnoreCase("done")){
+            flightStatus = FlightStatus.done;
+        }
+
+        else if(s.equalsIgnoreCase("undone")){
+            flightStatus = FlightStatus.undone;
+        }
+    }
+
+    public String getPassengerListString() {
+        return PassengerListString;
+    }
+
+    public void SetPassengerListString(){
+
+        for (int i = 0 ; i < PassengersList.size() ; i++){
+            PassengerListString += PassengersList.get(i).getId() + "  ";
+        }
+    }
 
 
     public int getIdflight() {

@@ -86,7 +86,7 @@ public class Passenger extends Person implements ShowAble {
 
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
 
     @Override

@@ -5,20 +5,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/Database/DatabaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/Database/DatabaseHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/LoginMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/LoginMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/Employee/Engage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/Employee/Engage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Flight/Add/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Flight/Add/Add.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Panel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Panel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/View/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/View/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/model/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/FlightAndPlane/Flight/Add/Add.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/FlightAndPlane/Flight/Add/Add.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Database/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Database/DatabaseHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/LoginMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/Employee/Engage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/Employee/Engage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/Add/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/Add/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/Delete/Delete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/Edit/Edit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/View/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/View/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/FlightAndPlane/Flight/Add/Add.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/FlightAndPlane/Flight/Add/Add.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/FlightAndPlane/Flight/Delete/Delete.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/FlightAndPlane/Flight/Edit/Edit.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/FlightAndPlane/Flight/View/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/FlightAndPlane/Flight/View/View.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/View" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2229885" />
@@ -285,7 +286,7 @@
       <workItem from="1595671044500" duration="700000" />
       <workItem from="1595743601639" duration="658000" />
       <workItem from="1595760681951" duration="2558000" />
-      <workItem from="1595830432737" duration="31265000" />
+      <workItem from="1595830432737" duration="49738000" />
     </task>
     <servers />
   </component>
@@ -311,11 +312,11 @@
     </state>
     <state x="398" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595068573463" />
     <state x="398" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1593857988193" />
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1595869209381">
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1595932485239">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595869209381" />
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1595072247848" />
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1595932485239" />
     <state x="438" y="227" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593943764078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -333,35 +334,35 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="296" y="0" width="676" height="680" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595760745606" />
-    <state x="348" y="83" key="FileChooserDialogImpl" timestamp="1595138489564">
+    <state x="348" y="83" key="FileChooserDialogImpl" timestamp="1595959075042">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="83" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595138489564" />
+    <state x="348" y="83" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595959075042" />
     <state x="348" y="83" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594362246917" />
-    <state width="140" height="553" key="GridCell.Tab.0.bottom" timestamp="1595929260328">
+    <state width="398" height="553" key="GridCell.Tab.0.bottom" timestamp="1595965399924">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="140" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595929260328" />
+    <state width="398" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595965399924" />
     <state width="29" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1595224573416" />
-    <state width="37" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="140" height="553" key="GridCell.Tab.0.center" timestamp="1595929260328">
+    <state width="750" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595930525112" />
+    <state width="398" height="553" key="GridCell.Tab.0.center" timestamp="1595965399923">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="140" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595929260328" />
+    <state width="398" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595965399923" />
     <state width="29" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1595224573416" />
-    <state width="37" height="553" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="140" height="553" key="GridCell.Tab.0.left" timestamp="1595929260328">
+    <state width="750" height="553" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595930525111" />
+    <state width="398" height="553" key="GridCell.Tab.0.left" timestamp="1595965399923">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="140" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595929260328" />
+    <state width="398" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595965399923" />
     <state width="29" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1595224573416" />
-    <state width="37" height="553" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
-    <state width="140" height="553" key="GridCell.Tab.0.right" timestamp="1595929260328">
+    <state width="750" height="553" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595930525111" />
+    <state width="398" height="553" key="GridCell.Tab.0.right" timestamp="1595965399924">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="140" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595929260328" />
+    <state width="398" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595965399924" />
     <state width="29" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1595224573416" />
-    <state width="37" height="553" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594362193943" />
+    <state width="750" height="553" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595930525111" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1595919467911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -408,18 +409,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="80" y="-16" width="1221" height="665" maximized="true" key="dock-window-2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595912569411" />
-    <state x="1920" y="79" width="937" height="665" maximized="true" key="dock-window-3" timestamp="1594138166442">
+    <state x="1920" y="0" width="768" height="665" maximized="true" key="dock-window-3" timestamp="1595938976449">
       <screen x="1920" y="0" width="1280" height="680" />
     </state>
-    <state x="1920" y="79" width="937" height="665" maximized="true" key="dock-window-3/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594138166442" />
-    <state x="1920" y="0" width="1251" height="665" maximized="true" key="dock-window-4" timestamp="1594138166442">
+    <state x="1920" y="0" width="768" height="665" maximized="true" key="dock-window-3/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595938976449" />
+    <state x="1920" y="0" width="768" height="665" maximized="true" key="dock-window-4" timestamp="1595953637119">
       <screen x="1920" y="0" width="1280" height="680" />
     </state>
-    <state x="1920" y="0" width="1251" height="665" maximized="true" key="dock-window-4/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594138166442" />
-    <state x="1920" y="0" width="937" height="606" maximized="true" key="dock-window-5" timestamp="1594139233194">
+    <state x="1920" y="0" width="768" height="665" maximized="true" key="dock-window-4/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595953637119" />
+    <state x="1920" y="0" width="1221" height="665" maximized="true" key="dock-window-5" timestamp="1595962696269">
       <screen x="1920" y="0" width="1280" height="680" />
     </state>
-    <state x="1920" y="0" width="937" height="606" maximized="true" key="dock-window-5/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1594139233194" />
+    <state x="1920" y="0" width="1221" height="665" maximized="true" key="dock-window-5/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595962696269" />
+    <state x="1920" y="0" width="1221" height="665" key="dock-window-6" timestamp="1595965244052">
+      <screen x="1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="1920" y="0" width="1221" height="665" key="dock-window-6/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595965244052" />
     <state x="91" y="0" key="new project wizard" timestamp="1595671663157">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

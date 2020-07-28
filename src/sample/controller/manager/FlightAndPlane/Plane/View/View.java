@@ -141,7 +141,6 @@ LoginMenuController loginMenuController = new LoginMenuController();
         }
 
         else {
-
             ObservableList<Airplane> selectedRows, allPlanes;
             allPlanes = tableView.getItems();
 
@@ -159,6 +158,7 @@ for (Airplane airplane : selectedRows)
     }
 
     private ObservableList<Airplane> getPlanes() throws SQLException, ClassNotFoundException {
+
         ObservableList<Airplane> Planes = FXCollections.observableArrayList();
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection ;
@@ -179,7 +179,6 @@ for (Airplane airplane : selectedRows)
         }
 
         return Planes;
-
         }
 
     }
