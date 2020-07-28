@@ -168,6 +168,7 @@ public class Engage {
             if(flag ) {
 
                 if (CheckRegex()) {
+
                     DatabaseHandler databaseHandler = new DatabaseHandler();
                     Connection connection ;
                     try {

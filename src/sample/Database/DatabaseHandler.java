@@ -164,13 +164,31 @@ public class DatabaseHandler extends Config {
             for(int i = 0 ; i < flightList(resultSet.getInt(2)).size() ; i++ ){
                 plane.addFlightLists(flightList(resultSet.getInt(2)).get(i));
             }
-
             plane.SetFlightListString();
-
-
             planes.add(plane);
         }
             return planes;
+    }
+
+    public ArrayList<Ticket> ReadTicket() throws SQLException{
+        ArrayList<Ticket> tickets = new ArrayList<>();
+        String query = "SELECT * from ticket";
+
+        preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        while (resultSet.next()) {
+Ticket ticket = new Ticket();
+
+ticket.setTicketPrice(resultSet.getDouble(3));
+ticket.setId(resultSet.getInt(2));
+ticket.setPenalty(resultSet.getDouble(4));
+
+tickets.add(ticket);
+
+        }
+        return tickets;
+
     }
 
 
@@ -216,6 +234,48 @@ public class DatabaseHandler extends Config {
 
         }
 
+    //Ticket :
+
+    public void AddTicket(int id , double price  , double penalty)throws SQLException{
+        String insert = "INSERT INTO ticket(id , ticketPrice , penalty)"+"VALUES(?,?,?)";
+        preparedStatement = connection.prepareStatement(insert);
+        preparedStatement.setInt(1    , id);
+        preparedStatement.setDouble(2 , price);
+        preparedStatement.setDouble(3 , penalty);
+        preparedStatement.executeUpdate();
+    }
+
+    public void DeleteTicket(int id) throws SQLException{
+        String query = "DELETE FROM ticket where id  = ?";
+
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, id);
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void UpdateTicket(int id , double price , double penalty) throws SQLException{
+        String query = "UPDATE ticket SET ticketPrice = ? , penalty = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setDouble(1, price);
+            preparedStatement.setDouble(2, penalty);
+            preparedStatement.setInt   (3, id);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     //employee :
 
@@ -341,9 +401,10 @@ public class DatabaseHandler extends Config {
     }
 
     //flight :
-    public void AddFlight(int planeId , int ticketId , String origin , String destination , String flightsDate , String flightsTime , int sold_ticket_number , Double flightDuration , Flight.FlightStatus flightStatus) throws SQLException {
-        int id = ReadFlights().size() + 50000;
-        String insert = "INSERT INTO flight(id , airplaneId , ticketId , origin  , destination , flightsDate , flightsTime , flightsTime , flightDuration , flightStatus)"+"VALUES(?,?,?,?,?,?,?,?,?,?)";
+    public void AddFlight(int planeId , int ticketId  , String origin , String destination , String flightsDate , String flightsTime , int sold_ticket_number , Double flightDuration , Flight.FlightStatus flightStatus) throws SQLException {
+        int id = ReadFlights().size() + 60000;
+
+        String insert = "INSERT INTO flight(id , airplaneId , ticketId , origin  , destination , flightsDate , flightsTime , sold_ticket_number , flightDuration , flightStatus)"+"VALUES(?,?,?,?,?,?,?,?,?,?)";
         preparedStatement = connection.prepareStatement(insert);
         preparedStatement.setInt(1 , id);
         preparedStatement.setInt(2 , planeId);
@@ -469,6 +530,14 @@ public class DatabaseHandler extends Config {
             }
         }
         return passengers;
+    }
+
+    public int newTicketId() throws SQLException {
+        int id = 40000;
+
+        id += ReadTicket().size();
+
+        return id ;
     }
 
 }

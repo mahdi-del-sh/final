@@ -32,34 +32,21 @@ public class LoginMenuController {
 
 
         superadminLoginBTN.setOnAction(event -> {
-
             ChangeWindow(superadminLoginBTN, "/sample/view/superadmin/SuperAdminLogIn.fxml" , "SuperAdmin Login"  );
-
-
-
 
         });
 
         managerLoginBTN.setOnAction(event -> {
-
             ChangeWindow(managerLoginBTN, "/sample/view/manager/login.fxml", "Manager Login"  );
-
-
-
 
         });
 
         employeeLoginBTN.setOnAction(event -> {
-
             ChangeWindow(employeeLoginBTN, "/sample/view/employee/EmployeeLogIn.fxml" , "Employee Login"  );
-
-
         });
 
         passengerLoginBTN.setOnAction(event -> {
-
             ChangeWindow(passengerLoginBTN, "/sample/view/passenger/PassengerLogIn.fxml" , "Passenger Login"  );
-
     });
 
 

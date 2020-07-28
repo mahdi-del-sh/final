@@ -14,6 +14,9 @@ public class Flight  implements ShowAble {
     }
 
     private int Id;
+    private int idflight;
+
+
     private int airplaneId ;
     private int ticketId;
     private String Origin;
@@ -25,6 +28,14 @@ public class Flight  implements ShowAble {
     private FlightStatus flightStatus ;
     private ArrayList<Passenger> PassengersList = new ArrayList<>();
 
+
+    public int getIdflight() {
+        return idflight;
+    }
+
+    public void setIdflight(int idflight) {
+        this.idflight = idflight;
+    }
 
     public void setId(int id) {
         Id = id;
