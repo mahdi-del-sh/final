@@ -193,7 +193,43 @@ tickets.add(ticket);
 
     }
 
+    //Passenger :
+    public void DeletePassenger(int id){
+        String query = "DELETE FROM passenger where id  = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, id);
+            preparedStatement.execute();
+            preparedStatement.close();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void UpdatePassenger(int id , String FirstName , String LastName , String username , String Password , String phone , String Email , double credit , int flightId){
+        String query = "UPDATE passenger SET name = ? , lastname = ? , username = ? , password =  ? , phoneNumber = ?  , credit = ? , email = ?  , flightid = ? "
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, FirstName);
+            preparedStatement.setString(2, LastName);
+            preparedStatement.setString(3, username);
+            preparedStatement.setString(4, Password);
+            preparedStatement.setString(5, phone);
+            preparedStatement.setDouble(6, credit);
+            preparedStatement.setString(7, Email);
+            preparedStatement.setInt(8,flightId);
+            preparedStatement.setInt   (9, id);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
     //manager :
 
     public  void updateManagers(String firstname, String lastname ,String username ,String phone, String address , String Email , int id) throws SQLException {
@@ -249,8 +285,6 @@ tickets.add(ticket);
 
     public void DeleteTicket(int id) throws SQLException{
         String query = "DELETE FROM ticket where id  = ?";
-
-
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, id);
