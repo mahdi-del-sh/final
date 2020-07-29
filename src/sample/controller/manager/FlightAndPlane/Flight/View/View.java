@@ -4,12 +4,16 @@ import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import sample.Database.DatabaseHandler;
@@ -19,6 +23,7 @@ import sample.model.Airplane;
 import sample.model.Flight;
 import sample.model.Ticket;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -68,7 +73,6 @@ public class View {
 
     ArrayList<Flight> changes = new ArrayList<>();
     LoginMenuController loginMenuController = new LoginMenuController();
-    Flight flight ;
 
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
@@ -105,6 +109,20 @@ public class View {
 
         Ticket.setOnAction(event -> {
 
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/view/manager/FlightAndPlane/Flight/View/TicketView.fxml"));
+            try{
+                loader.load();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Ticket Management");
+            stage.setScene(new Scene(root));
+            stage.show();
+
         });
 
         //set up the columns in table :
@@ -129,7 +147,7 @@ public class View {
         tableView.setEditable(true);
 
         PlaneIdColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-        TicketId.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+       // TicketId.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         OriginColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         DestinationColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         DateColumn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -362,6 +380,7 @@ public class View {
         }
         return flights;
     }
+
 
 
 }
