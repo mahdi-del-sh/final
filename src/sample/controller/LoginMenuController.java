@@ -3,8 +3,6 @@ package sample.controller;
 import com.jfoenix.controls.JFXButton;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,7 +30,7 @@ public class LoginMenuController {
 
 
         superadminLoginBTN.setOnAction(event -> {
-            ChangeWindow(superadminLoginBTN, "/sample/view/superadmin/SuperAdminLogIn.fxml" , "SuperAdmin Login"  );
+            ChangeWindow(superadminLoginBTN, "/sample/view/superadmin/Login.fxml", "SuperAdmin Login"  );
 
         });
 
