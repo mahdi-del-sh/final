@@ -1,5 +1,6 @@
 package sample.Database;
 
+import javafx.scene.control.TextArea;
 import sample.model.*;
 
 import java.sql.*;
@@ -69,6 +70,7 @@ public class DatabaseHandler extends Config {
         passenger.setCredit(resultSet.getDouble(8));
         passenger.setEmail(resultSet.getString(9));
         passenger.setFlightid(resultSet.getInt(10));
+        passenger.setMessage(resultSet.getString(11));
             passengers.add(passenger);
         }
         return passengers;
@@ -94,6 +96,7 @@ public class DatabaseHandler extends Config {
             employee.setAddress(resultSet.getString(8));
             employee.setEmail(resultSet.getString(9));
             employee.setSalary(resultSet.getDouble(10));
+            employee.setMessage(resultSet.getString(11));
 
 
             employees.add(employee);
@@ -180,13 +183,13 @@ public class DatabaseHandler extends Config {
         ResultSet resultSet = preparedStatement.executeQuery();
 
         while (resultSet.next()) {
-Ticket ticket = new Ticket();
+                Ticket ticket = new Ticket();
 
-ticket.setTicketPrice(resultSet.getDouble(3));
-ticket.setId(resultSet.getInt(2));
-ticket.setPenalty(resultSet.getDouble(4));
+                    ticket.setTicketPrice(resultSet.getDouble(3));
+            ticket.setId(resultSet.getInt(2));
+            ticket.setPenalty(resultSet.getDouble(4));
 
-tickets.add(ticket);
+            tickets.add(ticket);
 
         }
         return tickets;
@@ -206,6 +209,46 @@ tickets.add(ticket);
             e.printStackTrace();
         }
     }
+
+    public void UpdatePassengerMessage(String Message , int id){
+
+        String query = "UPDATE passenger SET message = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, Message);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void DeletePassengerMessage(int id){
+        String Message = "" ;
+
+        String query = "UPDATE passenger SET message = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, Message);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();}
+    }
+
+
+
+
 
     public void UpdatePassenger(int id , String FirstName , String LastName , String username , String Password , String phone , String Email , double credit , int flightId){
         String query = "UPDATE passenger SET name = ? , lastname = ? , username = ? , password =  ? , phoneNumber = ?  , credit = ? , email = ?  , flightid = ? "
@@ -230,6 +273,7 @@ tickets.add(ticket);
         }
 
     }
+
     //manager :
 
     public  void updateManagers(String firstname, String lastname ,String username ,String phone, String address , String Email , int id) throws SQLException {
@@ -364,6 +408,23 @@ tickets.add(ticket);
             e.printStackTrace();
         }
 
+    }
+
+    public void DeleteEmployeeMessage(int id){
+String Message = "" ;
+
+        String query = "UPDATE employee SET message = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, Message);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();}
     }
 
     public void updateEmployee(String firstname , String lastname , String username , String Phone , String Address , double Salary , String Email , int id)throws SQLException{

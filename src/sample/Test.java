@@ -16,14 +16,7 @@ public class Test {
         connection = databaseHandler.getConnection();
 
 
-//        if("0.0".matches("(\\d+\\.\\d+)")){
-//            System.out.println("Yes");
-//        }
-//        else {
-//            System.out.println("No");
-//        }
-
-
+        databaseHandler.DeletePassengerMessage(30000);
 
 
     }

@@ -4,31 +4,24 @@ import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import sample.controller.LoginMenuController;
 import sample.controller.manager.menu;
 
 public class Panel {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private JFXButton HomeBTN;
 
     @FXML
-    private JFXButton ViewPassengerMasssegeBTN;
+    private JFXButton ViewPassenger;
+
 
     @FXML
-    private JFXButton DeletePassengerMessageBTN;
+    private JFXButton ViewEmployee;
 
-    @FXML
-    private JFXButton ViewEmployeeMessageBTN;
 
-    @FXML
-    private JFXButton DeleteEmployeeMessageBTN;
-
+    LoginMenuController loginMenuController = new LoginMenuController();
     @FXML
     void initialize() {
 
@@ -36,6 +29,18 @@ public class Panel {
             menu managerMenuController =  new menu();
             managerMenuController.BackToManagerMenu(HomeBTN);
         });
+
+        ViewPassenger.setOnAction(event -> {
+            loginMenuController.ChangeWindow(ViewEmployee , "/sample/view/manager/Message/ViewPassenger.fxml" , "Message management");
+
+        });
+
+
+        ViewEmployee.setOnAction(event -> {
+loginMenuController.ChangeWindow(ViewEmployee , "/sample/view/manager/Message/ViewEmployee.fxml" , "Message management");
+        });
+
+
 
     }
 }

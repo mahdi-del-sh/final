@@ -1,6 +1,7 @@
 package sample.model;
 
 
+import javafx.scene.control.TextArea;
 import sample.model.Person;
 import sample.model.ShowAble;
 
@@ -16,6 +17,15 @@ public class Employee extends Person implements ShowAble {
     private String Address;
     private String Email;
     private double salary;
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public int getIdEmployee() {
         return idEmployee;
@@ -77,7 +87,7 @@ public class Employee extends Person implements ShowAble {
 
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
 
     @Override
