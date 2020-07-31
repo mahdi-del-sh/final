@@ -3,6 +3,7 @@ package sample.Database;
 import javafx.scene.control.TextArea;
 import sample.model.*;
 
+import javax.swing.text.StyledEditorKit;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -313,6 +314,29 @@ public class DatabaseHandler extends Config {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+
+        }
+
+    public void addManager(String name, String lastName ,String userName ,String password, String phoneNumber , String Address , String Email , double Salary) throws SQLException {
+
+        int ID = ReadManagers().get(ReadManagers().size()-1).getId()+1;
+//        int IsSuperAdmin = 0 ;
+
+            String insert = "INSERT INTO manager(id , name , lastName , userName , password ,phoneNumber , Address , Email , salary , isSuperAdmin)"+"VALUES(?,?,?,?,?,?,?,?,?,?)";
+            preparedStatement = connection.prepareStatement(insert);
+
+            preparedStatement.setInt(1 , ID);
+            preparedStatement.setString(2 , name);
+            preparedStatement.setString(3 , lastName);
+            preparedStatement.setString(4 , userName);
+            preparedStatement.setString(5 , password);
+            preparedStatement.setString(6 , phoneNumber);
+            preparedStatement.setString(7 , Address);
+            preparedStatement.setString(8 , Email);
+            preparedStatement.setDouble(9 , Salary);
+            preparedStatement.setInt(10 , 0);
+
+            preparedStatement.executeUpdate();
 
         }
 

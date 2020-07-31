@@ -16,8 +16,7 @@ public class Test {
         connection = databaseHandler.getConnection();
 
 
-        databaseHandler.DeletePassengerMessage(30000);
-
+        databaseHandler.addManager("mahdi" , "wdwed" , "e332e" , "23e3" , "32r2r" , "23rr23" , "ewfewf" , 2000.0);
 
     }
 
