@@ -31,5 +31,11 @@ public class Panel {
         EngageManagerBTN.setOnAction(event -> {
             loginMenuController.ChangeWindow(EngageManagerBTN , "/sample/view/superadmin/Manager/EngageManager.fxml" , "Engage Manager");
         });
+
+        EditManagersBTN.setOnAction(event -> {
+            loginMenuController.ChangeWindow(EditManagersBTN , "/sample/view/superadmin/Manager/ViewManagers.fxml" , "Edit Manager");
+
+        });
+
     }
 }

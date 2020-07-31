@@ -299,6 +299,30 @@ public class DatabaseHandler extends Config {
             }
         }
 
+    public void UpdateManager(String FirstName , String LastName , String userName , String Password , String PhoneNumber , String Address , String Email , double Salary , int id){
+
+        String query = "UPDATE manager SET name = ? , lastname =? , username = ? , password = ? , phoneNumber = ? , Address = ? , Email = ? , salary = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, FirstName);
+            preparedStatement.setString(2, LastName );
+            preparedStatement.setString(3, userName );
+            preparedStatement.setString(4, Password);
+            preparedStatement.setString(5, PhoneNumber);
+            preparedStatement.setString(6, Address  );
+            preparedStatement.setString(7, Email    );
+            preparedStatement.setDouble(8, Salary    );
+            preparedStatement.setInt   (9, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void UpdateManagerPassword(String password , int id){
 
             String query = "UPDATE manager SET password = ?"
@@ -339,6 +363,19 @@ public class DatabaseHandler extends Config {
             preparedStatement.executeUpdate();
 
         }
+
+    public void DeleteManager(int id){
+        String query = "DELETE FROM manager where id  = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, id);
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     //Ticket :
 

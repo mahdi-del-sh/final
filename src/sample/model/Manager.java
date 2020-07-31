@@ -3,6 +3,7 @@ package sample.model;
 public class Manager extends Person implements ShowAble {
 
 private int idmanager;
+
 private int id;
 private String name;
 private String lastName;
@@ -12,6 +13,7 @@ private String phoneNumber;
 private String Address;
 private String Email;
 private double salary;
+
 private int isSuperAdmin = 0;
 
     public int getIdmanager() {

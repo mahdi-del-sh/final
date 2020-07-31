@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.superadmin.Manager.ViewManagers">
+   <children>
+      <AnchorPane accessibleRole="BUTTON" layoutX="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="873.0" style="-fx-background-color: #a7c0cd;">
+         <children>
+            <AnchorPane prefHeight="30.0" prefWidth="874.0" style="-fx-background-color: #4b636e;" />
+            <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="878.0" style="-fx-background-color: #78909c;">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="58.0" layoutX="382.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/icons8-manager-64.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="12.0" prefHeight="46.0" prefWidth="256.0" text="View/Edit/Delete">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="465.0" layoutY="12.0" prefHeight="46.0" prefWidth="177.0" text="Flights">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Group layoutX="13.0" layoutY="133.0" />
+            <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="23.0" layoutY="616.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Delete" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="764.0" layoutY="615.0" prefHeight="37.0" prefWidth="91.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Confirm" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="651.0" layoutY="616.0" prefHeight="37.0" prefWidth="91.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Confirm">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tableView" layoutX="26.0" layoutY="116.0" prefHeight="478.0" prefWidth="835.0">
+               <columns>
+                  <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
+                  <TableColumn fx:id="FirstNameColumn" onEditCommit="#changeNameCellEvent" prefWidth="75.0" text="FirstName" />
+                  <TableColumn fx:id="LastNameColumn" onEditCommit="#changeLastNameCellEvent" prefWidth="75.0" text="LastName" />
+                  <TableColumn fx:id="UserNameColumn" onEditCommit="#changeUserNameCellEvent" prefWidth="75.0" text="UserName" />
+                  <TableColumn fx:id="PasswordColumn" onEditCommit="#changePasswordCellEvent" prefWidth="75.0" text="Password" />
+                  <TableColumn fx:id="PhoneColumn" onEditCommit="#changePhoneCellEvent" prefWidth="99.77777099609375" text="Phone" />
+                  <TableColumn fx:id="AddressColumn" onEditCommit="#changeAddressCellEvent" prefWidth="122.22219848632812" text="Address" />
+                  <TableColumn fx:id="EmailColumn" onEditCommit="#changeEmailCellEvent" prefWidth="152.4444580078125" text="Email" />
+                  <TableColumn fx:id="SalaryColumn" onEditCommit="#changeSalaryCellEvent" prefWidth="84.0" text="Salary" />
+               </columns>
+            </TableView>
+            <Label fx:id="Label" layoutX="251.0" layoutY="604.0" prefHeight="58.0" prefWidth="367.0" textFill="#068c12">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
