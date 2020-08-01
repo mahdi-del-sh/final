@@ -94,7 +94,7 @@ public class PassengerProfileController {
                     e.printStackTrace();
                 }
 
-                databaseHandler.UpdatePassenger(login.IdManager , FirstNameTXF.getText() , LastnameTXF.getText() , UsernameTXF.getText() , password  , PhoneTXF.getText()  , EmailTXF.getText() , credit , flightId  );
+                databaseHandler.UpdatePassenger(login.IdManager , FirstNameTXF.getText() , LastnameTXF.getText() , UsernameTXF.getText() , password  , PhoneTXF.getText()  , EmailTXF.getText() , credit  );
 EmailLBL.setText("Changed Successfully!");
             }
 
@@ -123,7 +123,6 @@ EmailLBL.setText("Changed Successfully!");
                 EmailTXF.setText(databaseHandler.ReadPassengers().get(i).getEmail());
                 password = databaseHandler.ReadPassengers().get(i).getPassword();
                 credit = databaseHandler.ReadPassengers().get(i).getCredit();
-                flightId = databaseHandler.ReadPassengers().get(i).getFlightid();
 
             }
         }

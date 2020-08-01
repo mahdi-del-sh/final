@@ -1,18 +1,14 @@
-package sample.controller.passenger.passengerPanelController;
+package sample.controller.passenger.Ticket;
 
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import sample.controller.LoginMenuController;
 import sample.controller.passenger.Menu;
 
 public class PassengerTicketController {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private JFXButton HomeBTN;
@@ -25,12 +21,18 @@ public class PassengerTicketController {
 
     Menu passengerMenuController  = new Menu();
 
+    LoginMenuController loginMenuController = new LoginMenuController();
+
     @FXML
     void initialize() {
 
         HomeBTN.setOnAction(event -> {
 
             passengerMenuController.BackToPassengerMenu(HomeBTN);
+        });
+
+        BuyBTN.setOnAction(event -> {
+loginMenuController.ChangeWindow(BuyBTN , "/sample/view/passenger/Ticket/BuyTicket.fxml" , "Ticket Management");
         });
 
     }

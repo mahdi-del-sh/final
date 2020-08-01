@@ -56,7 +56,7 @@ public class Menu {
         });
 
         TicketManagementBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(TicketManagementBTN , "/sample/view/passenger/passengerPanel/PassengerTicket.fxml" , "Ticket Management");
+            loginMenuController.ChangeWindow(TicketManagementBTN , "/sample/view/passenger/Ticket/PassengerTicket.fxml", "Ticket Management");
         });
 
         IncreaseValidityBTN.setOnAction(event -> {

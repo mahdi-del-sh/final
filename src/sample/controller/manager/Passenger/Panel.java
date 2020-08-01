@@ -45,8 +45,6 @@ public class Panel {
 
     @FXML private TableColumn<Passenger , String> emailColumn;
 
-    @FXML private TableColumn<Passenger , Integer> flightIdColumn;
-
     @FXML
     private JFXButton Confirm;
 
@@ -69,7 +67,7 @@ public class Panel {
             managerMenuController.BackToManagerMenu(HomeBTN);
         });
 
-Delete.setOnAction(event -> {
+        Delete.setOnAction(event -> {
     try {
         deleteButtonPushed();
     } catch (SQLException e) {
@@ -80,7 +78,7 @@ Delete.setOnAction(event -> {
 
 });
 
-Confirm.setOnAction(event -> {
+        Confirm.setOnAction(event -> {
     DatabaseHandler databaseHandler = new DatabaseHandler();
     Connection connection ;
     try {
@@ -91,13 +89,12 @@ Confirm.setOnAction(event -> {
         e.printStackTrace();
     }
     for(Passenger passenger  :changes){
-        databaseHandler.UpdatePassenger(passenger.getId() , passenger.getName() , passenger.getLastName() , passenger.getUserName() , passenger.getPassword() , passenger.getPhoneNumber() , passenger.getEmail() , passenger.getCredit() , passenger.getFlightid());
+        databaseHandler.UpdatePassenger(passenger.getId() , passenger.getName() , passenger.getLastName() , passenger.getUserName() , passenger.getPassword() , passenger.getPhoneNumber() , passenger.getEmail() , passenger.getCredit());
     }
     label.setText("Changed successfully");
 });
         //set up columns in table :
         IdColumn.setCellValueFactory(new PropertyValueFactory<Passenger , Integer>("Id"));
-        flightIdColumn.setCellValueFactory(new PropertyValueFactory<Passenger , Integer>("flightid"));
         creditColumn.setCellValueFactory(new PropertyValueFactory<Passenger , Double>("credit"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Passenger , String>("name"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<Passenger , String>("lastName"));
@@ -112,7 +109,6 @@ Confirm.setOnAction(event -> {
 
         tableView.setEditable(true);
 
-        flightIdColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         creditColumn.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
 
         nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -297,29 +293,29 @@ Confirm.setOnAction(event -> {
 
     }//*
 
-    public void changeFlightIdCellEvent(TableColumn.CellEditEvent edittedCell) throws SQLException, ClassNotFoundException {
-
-
-
-        Passenger PassengerSelected =  tableView.getSelectionModel().getSelectedItem();
-        PassengerSelected.setFlightid((Integer) edittedCell.getNewValue());
-
-        if(checkFlightId(Integer.parseInt(edittedCell.getNewValue().toString()))){
-
-            this.Confirm.setDisable(false);
-            label.setText("");
-            for(Passenger passenger : changes){
-                if(passenger.getId()==tableView.getSelectionModel().getSelectedItem().getId()){
-                    passenger.setFlightid(Integer.parseInt(edittedCell.getNewValue().toString()));
-                }
-            }
-        }
-        else{
-            this.Confirm.setDisable(true);
-            label.setText("Enter Valid flight id");
-        }
-
-    }//*
+//    public void changeFlightIdCellEvent(TableColumn.CellEditEvent edittedCell) throws SQLException, ClassNotFoundException {
+//
+//
+//
+//        Passenger PassengerSelected =  tableView.getSelectionModel().getSelectedItem();
+//        PassengerSelected.setFlightid((Integer) edittedCell.getNewValue());
+//
+//        if(checkFlightId(Integer.parseInt(edittedCell.getNewValue().toString()))){
+//
+//            this.Confirm.setDisable(false);
+//            label.setText("");
+//            for(Passenger passenger : changes){
+//                if(passenger.getId()==tableView.getSelectionModel().getSelectedItem().getId()){
+//                    passenger.setFlightid(Integer.parseInt(edittedCell.getNewValue().toString()));
+//                }
+//            }
+//        }
+//        else{
+//            this.Confirm.setDisable(true);
+//            label.setText("Enter Valid flight id");
+//        }
+//
+//    }//*
 
 
 
@@ -334,20 +330,20 @@ Confirm.setOnAction(event -> {
         return flag;
     }
 
-    private boolean checkFlightId(int id) throws SQLException, ClassNotFoundException {
-
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-        Connection connection ;
-        connection = databaseHandler.getConnection();
-
-        boolean flag = false;
-        for(Flight flight : databaseHandler.ReadFlights()){
-            if(flight.getId()==id){
-                flag  = true;
-            }
-        }
-        return flag;
-    }
+//    private boolean checkFlightId(int id) throws SQLException, ClassNotFoundException {
+//
+//        DatabaseHandler databaseHandler = new DatabaseHandler();
+//        Connection connection ;
+//        connection = databaseHandler.getConnection();
+//
+//        boolean flag = false;
+//        for(Flight flight : databaseHandler.ReadFlights()){
+//            if(flight.getId()==id){
+//                flag  = true;
+//            }
+//        }
+//        return flag;
+//    }
 
     private ObservableList<Passenger> getPassengers() throws SQLException, ClassNotFoundException {
         ObservableList<Passenger> passengers = FXCollections.observableArrayList();

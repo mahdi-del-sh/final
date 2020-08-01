@@ -15,7 +15,6 @@ public class Passenger extends Person implements ShowAble {
     private String phoneNumber;
     private double credit;
     private String Email;
-    private int flightid ;
     private String message ;
 
     public String getMessage() {
@@ -24,14 +23,6 @@ public class Passenger extends Person implements ShowAble {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public int getFlightid() {
-        return flightid;
-    }
-
-    public void setFlightid(int flightid) {
-        this.flightid = flightid;
     }
 
     public int getIdPassengers() {

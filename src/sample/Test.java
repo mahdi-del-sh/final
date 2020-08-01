@@ -2,6 +2,7 @@ package sample;
 
 import sample.Database.DatabaseHandler;
 
+import java.io.UTFDataFormatException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -42,9 +43,14 @@ public class Test {
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection =  databaseHandler.getConnection();
 
-databaseHandler.UpdatePassengerPassword("qqqqqqqqqqqqqqqq" , 30005);
 
+//
+//        System.out.println(databaseHandler.ReadPassengerTicket().get(2).passengerId);
+//        System.out.println(databaseHandler.ReadPassengerTicket().get(2).flightId);
+//        System.out.println(databaseHandler.ReadPassengerTicket().get(2).passengerId);
       //  databaseHandler.AddPassenger("kamran" , "WEdewd" , "dwedwed" , "e32e" , "0195823486952" , 2536.25 , "rewfrewfwerf");
+
+databaseHandler.AddTicketPassenger(30000 , 40001 , 60002);
 
     }
 }

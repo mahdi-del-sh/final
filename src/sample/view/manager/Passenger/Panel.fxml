@@ -51,10 +51,9 @@
                               <TableColumn fx:id="lastNameColumn" onEditCommit="#changeLastNameCellEvent" prefWidth="75.0" text="Last Name" />
                               <TableColumn fx:id="usernameColumn" onEditCommit="#changeUserNameCellEvent" prefWidth="75.0" text="Username" />
                               <TableColumn fx:id="passwordColumn" onEditCommit="#changePasswordCellEvent" prefWidth="75.0" text="Password" />
-                              <TableColumn fx:id="phoneColumn" onEditCommit="#changePhoneCellEvent" prefWidth="75.0" text="Phone" />
-                              <TableColumn fx:id="creditColumn" onEditCommit="#changeCreditCellEvent" prefWidth="75.0" text="Credit" />
-                              <TableColumn fx:id="emailColumn" onEditCommit="#changeEmailCellEvent" prefWidth="178.0" text="Email" />
-                              <TableColumn fx:id="flightIdColumn" onEditCommit="#changeFlightIdCellEvent" prefWidth="75.0" text="Flight id" />
+                              <TableColumn fx:id="phoneColumn" onEditCommit="#changePhoneCellEvent" prefWidth="94.88894653320312" text="Phone" />
+                              <TableColumn fx:id="creditColumn" onEditCommit="#changeCreditCellEvent" prefWidth="98.44439697265625" text="Credit" />
+                              <TableColumn fx:id="emailColumn" onEditCommit="#changeEmailCellEvent" prefWidth="210.888916015625" text="Email" />
                           </columns>
                         </TableView>
                         <JFXButton fx:id="Confirm" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="716.0" layoutY="477.0" prefHeight="37.0" prefWidth="103.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Confirm">

@@ -14,9 +14,6 @@ public class Flight  implements ShowAble {
     }
 
     private int Id;
-    private int idflight;
-    private int airplaneId ;
-    private int ticketId;
     private String Origin;
     private String Destination;
     private String FlightsDate;
@@ -26,6 +23,9 @@ public class Flight  implements ShowAble {
     private FlightStatus flightStatus ;
     private String status  = "";
     private String PassengerListString = "" ;
+    private int idflight;
+    private int airplaneId ;
+    private int ticketId;
     private ArrayList<Passenger> PassengersList = new ArrayList<>();
 
     public String getStatus() {

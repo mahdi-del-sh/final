@@ -71,8 +71,7 @@ public class DatabaseHandler extends Config {
         passenger.setPhoneNumber(resultSet.getString(7));
         passenger.setCredit(resultSet.getDouble(8));
         passenger.setEmail(resultSet.getString(9));
-        passenger.setFlightid(resultSet.getInt(10));
-        passenger.setMessage(resultSet.getString(11));
+        passenger.setMessage(resultSet.getString(10));
             passengers.add(passenger);
         }
         return passengers;
@@ -285,7 +284,7 @@ public class DatabaseHandler extends Config {
     public void AddPassenger(String FirstName , String LastName , String UserName , String Password , String PhoneNumber , double Credit , String Email) throws SQLException {
         int Id = ReadPassengers().get(ReadPassengers().size()-1).getId() + 1 ;
 
-        String insert = "INSERT INTO passenger(id , name , lastName , username , password ,phoneNumber , credit , email , flightid , message)"+"VALUES(?,?,?,?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO passenger(id , name , lastName , username , password ,phoneNumber , credit , email , message)"+"VALUES(?,?,?,?,?,?,?,?,?)";
         preparedStatement = connection.prepareStatement(insert);
 
         preparedStatement.setInt(1 , Id);
@@ -296,8 +295,7 @@ public class DatabaseHandler extends Config {
         preparedStatement.setString(6 , PhoneNumber);
         preparedStatement.setDouble(7 , Credit);
         preparedStatement.setString(8 , Email);
-        preparedStatement.setInt(  9 , 0);
-        preparedStatement.setString(10 , " ");
+        preparedStatement.setString(9 , " ");
 
 
         preparedStatement.executeUpdate();
@@ -339,7 +337,6 @@ public class DatabaseHandler extends Config {
 
     }
 
-
     public void UpdatePassengerPassword(String password , int id){
 
         String query = "UPDATE passenger SET password = ?"
@@ -358,9 +355,8 @@ public class DatabaseHandler extends Config {
 
     }
 
-
-    public void UpdatePassenger(int id , String FirstName , String LastName , String username , String Password , String phone , String Email , double credit , int flightId){
-        String query = "UPDATE passenger SET name = ? , lastname = ? , username = ? , password =  ? , phoneNumber = ?  , credit = ? , email = ?  , flightid = ? "
+    public void UpdatePassenger(int id , String FirstName , String LastName , String username , String Password , String phone , String Email , double credit ){
+        String query = "UPDATE passenger SET name = ? , lastname = ? , username = ? , password =  ? , phoneNumber = ?  , credit = ? , email = ?  "
                 + "where id = ?";
 
         try {
@@ -372,8 +368,7 @@ public class DatabaseHandler extends Config {
             preparedStatement.setString(5, phone);
             preparedStatement.setDouble(6, credit);
             preparedStatement.setString(7, Email);
-            preparedStatement.setInt(8,flightId);
-            preparedStatement.setInt   (9, id);
+            preparedStatement.setInt   (8, id);
             preparedStatement.executeUpdate();
             preparedStatement.close();
 
@@ -786,6 +781,25 @@ String Message = "" ;
         }
     }
 
+    public void UpdateFlightS_T_N(int S_T_N , int id){
+
+        String query = "UPDATE flight SET sold_ticket_number = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, S_T_N);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
     // other methods :
 
     public boolean CheckUsername(String username) throws SQLException {
@@ -830,9 +844,14 @@ String Message = "" ;
     public ArrayList<Passenger> passengerList (int flightId) throws SQLException{
         ArrayList<Passenger> passengers = new ArrayList<>();
 
-        for(int i = 0 ; i < ReadPassengers().size() ; i++){
-            if(ReadPassengers().get(i).getFlightid() == flightId){
-                passengers.add(ReadPassengers().get(i));
+        for(int i = 0 ; i < ReadPassengerTicket().size() ; i++){
+            if(ReadPassengerTicket().get(i).getFlightId() == flightId){
+                for(Passenger passenger : ReadPassengers()){
+                    if(passenger.getId() == ReadPassengerTicket().get(i).getPassengerId()){
+                            passengers.add(passenger);
+                    }
+                }
+
             }
         }
         return passengers;
@@ -844,6 +863,17 @@ String Message = "" ;
         id += ReadTicket().size();
 
         return id ;
+    }
+
+    public void  AddTicketPassenger(int passengerId , int ticketId , int flightId) throws SQLException {
+        String insert = "INSERT INTO passengerticket (passengerId , ticketId , flightId)"+"VALUES(?,?,?)";
+
+        preparedStatement = connection.prepareStatement(insert);
+        preparedStatement.setInt(1    , passengerId);
+        preparedStatement.setInt(2    , ticketId);
+        preparedStatement.setInt(3    , flightId);
+        preparedStatement.executeUpdate();
+
     }
 
 }

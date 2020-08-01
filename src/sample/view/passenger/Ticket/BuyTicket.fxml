@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.passenger.Ticket.BuyTicket">
+   <children>
+      <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="831.0" style="-fx-background-color: #a7c0cd;">
+         <children>
+            <AnchorPane prefHeight="30.0" prefWidth="832.0" style="-fx-background-color: #4b636e;" />
+            <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="832.0" style="-fx-background-color: #78909c;">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="71.0" layoutX="397.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/icons8-movie-ticket-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="172.0" layoutY="12.0" prefHeight="46.0" prefWidth="193.0" text="Buy">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="480.0" layoutY="12.0" prefHeight="46.0" prefWidth="181.0" text="Ticket">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Group layoutX="13.0" layoutY="133.0" />
+            <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="37.0" layoutY="430.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tableView1" layoutX="34.0" layoutY="122.0" prefHeight="291.0" prefWidth="529.0">
+              <columns>
+                <TableColumn fx:id="FlightId" prefWidth="75.0" text="FlightId" />
+                <TableColumn fx:id="OriginColumn" prefWidth="75.0" text="Origin" />
+                  <TableColumn fx:id="DestinationColumn" prefWidth="75.0" text="Destination" />
+                  <TableColumn fx:id="DateColumn" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="TimeColumn" prefWidth="75.0" text="Time" />
+                  <TableColumn fx:id="S_T_NColumn" prefWidth="75.0" text="S_T_N" />
+                  <TableColumn fx:id="DurationColumn" prefWidth="75.0" text="Duration" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tableView2" layoutX="563.0" layoutY="122.0" prefHeight="291.0" prefWidth="229.0">
+              <columns>
+                <TableColumn fx:id="TicketId" prefWidth="75.0" text="TicketID" />
+                <TableColumn fx:id="PriceId" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="PenaltyId" prefWidth="77.33327229817709" text="Penalty" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="BuyBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="712.0" layoutY="429.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Buy">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="label" layoutX="182.0" layoutY="422.0" prefHeight="61.0" prefWidth="448.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
