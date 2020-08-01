@@ -19,15 +19,11 @@ import javafx.stage.Stage;
 import sample.Database.DatabaseHandler;
 import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
+import sample.model.Passenger;
 
 public class Login {
     static boolean username ;
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private JFXButton HomeBTN;
@@ -45,11 +41,16 @@ public class Login {
     private JFXButton EnterBTN;
 
 
+
+
     @FXML
     private Label ErrorLBL;
 
+    public static int IdManager ;
+
     @FXML
     void initialize() {
+
 
         HomeBTN.setOnAction(event -> {
 
@@ -156,6 +157,8 @@ public class Login {
         for(int i = 0 ; i < databaseHandler.ReadPassengers().size() ; i++){
             if(databaseHandler.ReadPassengers().get(i).getUserName().equals(userName) && databaseHandler.ReadPassengers().get(i).getPassword().equals(Password)){
                 flag = true;
+                IdManager =   databaseHandler.ReadPassengers().get(i).getId();
+
             }
         }
 
@@ -172,4 +175,7 @@ public class Login {
         return flag;
 
     }
+
+
+
 }

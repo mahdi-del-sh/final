@@ -60,7 +60,7 @@ public class Menu {
         });
 
         IncreaseValidityBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(IncreaseValidityBTN , "/sample/view/passenger/passengerPanel/PassengerValidity.fxml" , "Increase Validity");
+            loginMenuController.ChangeWindow(IncreaseValidityBTN , "/sample/view/passenger/Valdity/PassengerValidity.fxml", "Increase Validity");
         });
     }
 
