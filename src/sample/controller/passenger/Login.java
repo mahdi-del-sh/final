@@ -20,7 +20,7 @@ import sample.Database.DatabaseHandler;
 import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
 
-public class PassengerLogInController {
+public class Login {
     static boolean username ;
 
     @FXML
@@ -82,7 +82,7 @@ public class PassengerLogInController {
 
                         EnterBTN.getScene().getWindow().hide();
                         FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(getClass().getResource("/sample/view/passenger/PassengerMenu.fxml"));
+                        loader.setLocation(getClass().getResource("/sample/view/passenger/Menu.fxml"));
                         try{
                             loader.load();
                         }catch (IOException e){
@@ -140,7 +140,7 @@ public class PassengerLogInController {
         });
 
         RegisterBTN.setOnAction(event -> {
-            LoginMenuController loginMenuController =  new LoginMenuController();loginMenuController.ChangeWindow(RegisterBTN , "/sample/view/passenger/PassengerRegister.fxml" ,"Register Panel" );
+            LoginMenuController loginMenuController =  new LoginMenuController();loginMenuController.ChangeWindow(RegisterBTN , "/sample/view/passenger/Register.fxml","Register Panel" );
         });
 
     }

@@ -44,7 +44,7 @@ public class LoginMenuController {
         });
 
         passengerLoginBTN.setOnAction(event -> {
-            ChangeWindow(passengerLoginBTN, "/sample/view/passenger/PassengerLogIn.fxml" , "Passenger Login"  );
+            ChangeWindow(passengerLoginBTN, "/sample/view/passenger/Login.fxml", "Passenger Login"  );
     });
 
 

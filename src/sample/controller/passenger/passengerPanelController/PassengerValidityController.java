@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import sample.controller.passenger.PassengerMenuController;
+import sample.controller.passenger.Menu;
 
 public class PassengerValidityController {
 
@@ -24,7 +24,7 @@ public class PassengerValidityController {
     @FXML
     private Label ErrorLBL;
 
-    PassengerMenuController passengerMenuController =  new PassengerMenuController();
+    Menu passengerMenuController =  new Menu();
 
     @FXML
     void initialize() {

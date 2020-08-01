@@ -13,7 +13,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.controller.LoginMenuController;
 
-public class PassengerMenuController {
+public class Menu {
 
     @FXML
     private ResourceBundle resources;
@@ -67,7 +67,7 @@ public class PassengerMenuController {
     public void BackToPassengerMenu(Node node){
         node.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/sample/view/passenger/PassengerMenu.fxml"));
+        loader.setLocation(getClass().getResource("/sample/view/passenger/Menu.fxml"));
         try{
             loader.load();
         }catch (IOException e){

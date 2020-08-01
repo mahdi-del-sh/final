@@ -69,11 +69,6 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <JFXButton fx:id="Ticket" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="123.0" layoutY="617.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Ticket">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </JFXButton>
          </children>
       </AnchorPane>
    </children>

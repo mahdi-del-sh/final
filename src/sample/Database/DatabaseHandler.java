@@ -1,6 +1,7 @@
 package sample.Database;
 
 import javafx.scene.control.TextArea;
+import sample.Test;
 import sample.model.*;
 
 import javax.swing.text.StyledEditorKit;
@@ -197,6 +198,58 @@ public class DatabaseHandler extends Config {
 
     }
 
+    public ArrayList<Test> ReadPassengerTicket() throws SQLException{
+        ArrayList<Test> tickets = new ArrayList<>();
+        String query = "SELECT * from passengerticket";
+
+        preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        while (resultSet.next()) {
+            Test test = new Test();
+
+            test.setTicketId(resultSet.getInt(2));
+            test.setPassengerId(resultSet.getInt(1));
+            test.setFlightId(resultSet.getInt(3));
+
+            tickets.add(test);
+
+        }
+        return tickets;
+
+    }
+
+    public int getBank() throws SQLException {
+    String query = "SELECT * from manager";
+
+    preparedStatement = connection.prepareStatement(query);
+    ResultSet resultSet = preparedStatement.executeQuery();
+
+    int i = 0;
+
+    while(resultSet.next()){
+
+        i = resultSet.getInt("bank");
+
+    }
+    return i;
+    }
+
+    public ArrayList<Integer> PassengerRepeat() throws SQLException{
+        ArrayList<Integer> tickets = new ArrayList<>();
+        String query = "SELECT * from passengerticket";
+
+        preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        while (resultSet.next()) {
+
+            tickets.add(resultSet.getInt(1));
+
+        }
+        return tickets;
+    }
+
     //Passenger :
     public void DeletePassenger(int id){
         String query = "DELETE FROM passenger where id  = ?";
@@ -229,6 +282,27 @@ public class DatabaseHandler extends Config {
 
     }
 
+    public void AddPassenger(String FirstName , String LastName , String UserName , String Password , String PhoneNumber , double Credit , String Email) throws SQLException {
+        int Id = ReadPassengers().get(ReadPassengers().size()-1).getId() + 1 ;
+
+        String insert = "INSERT INTO passenger(id , name , lastName , username , password ,phoneNumber , credit , email , flightid , message)"+"VALUES(?,?,?,?,?,?,?,?,?,?)";
+        preparedStatement = connection.prepareStatement(insert);
+
+        preparedStatement.setInt(1 , Id);
+        preparedStatement.setString(2 , FirstName);
+        preparedStatement.setString(3 , LastName);
+        preparedStatement.setString(4 , UserName);
+        preparedStatement.setString(5 , Password);
+        preparedStatement.setString(6 , PhoneNumber);
+        preparedStatement.setDouble(7 , Credit);
+        preparedStatement.setString(8 , Email);
+        preparedStatement.setInt(  9 , 0);
+        preparedStatement.setString(10 , " ");
+
+
+        preparedStatement.executeUpdate();
+
+    }
 
     public void DeletePassengerMessage(int id){
         String Message = "" ;
@@ -247,6 +321,23 @@ public class DatabaseHandler extends Config {
             e.printStackTrace();}
     }
 
+    public void UpdatePassengerCredit(double credit , int id){
+
+        String query = "UPDATE passenger SET credit = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setDouble(1, credit);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
 
@@ -323,14 +414,14 @@ public class DatabaseHandler extends Config {
         }
     }
 
-    public void UpdateManagerPassword(String password , int id){
+    public void UpdateManagerSalary(double salary , int id){
 
-            String query = "UPDATE manager SET password = ?"
-                    + "where idmanager = ?";
+            String query = "UPDATE manager SET salary = ?"
+                    + "where id = ?";
 
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                preparedStatement.setString(1, password);
+                preparedStatement.setDouble(1, salary);
                 preparedStatement.setInt   (2, id       );
                 preparedStatement.executeUpdate();
                 preparedStatement.close();
@@ -340,6 +431,25 @@ public class DatabaseHandler extends Config {
             }
 
         }
+
+
+    public void UpdateManagerPassword(String password , int id){
+
+        String query = "UPDATE manager SET password = ?"
+                + "where idmanager = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, password);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public void addManager(String name, String lastName ,String userName ,String password, String phoneNumber , String Address , String Email , double Salary) throws SQLException {
 
@@ -470,6 +580,25 @@ public class DatabaseHandler extends Config {
         }
 
     }
+
+    public void UpdateEmployeeSalary(double salary , int id){
+
+        String query = "UPDATE employee SET salary = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setDouble(1, salary);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     public void DeleteEmployeeMessage(int id){
 String Message = "" ;
@@ -645,11 +774,6 @@ String Message = "" ;
     public boolean CheckUsername(String username) throws SQLException {
         boolean flag = true;
 
-        for(int i = 0 ; i < ReadEmployee().size() ; i++){
-            if(ReadEmployee().get(i).getUserName().equalsIgnoreCase(username)){
-                flag = false;
-            }
-        }
 
         for(int i = 0 ; i < ReadManagers().size() ; i++){
             if(ReadManagers().get(i).getUserName().equalsIgnoreCase(username)){
@@ -662,6 +786,13 @@ String Message = "" ;
                 flag = false;
             }
         }
+
+        for(int i = 0 ; i < ReadEmployee().size() ; i++){
+            if(ReadEmployee().get(i).getUserName().equalsIgnoreCase(username)){
+                flag = false;
+            }
+        }
+
 
 
         return  flag;

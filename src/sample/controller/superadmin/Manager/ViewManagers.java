@@ -40,7 +40,7 @@ public class ViewManagers {
 
     @FXML
     private JFXButton HomeBTN;
-    
+
     @FXML
     private JFXButton Delete;
 

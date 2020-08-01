@@ -4,7 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import sample.controller.passenger.PassengerMenuController;
+import sample.controller.passenger.Menu;
 
 public class PassengerTicketController {
 
@@ -23,7 +23,7 @@ public class PassengerTicketController {
     @FXML
     private JFXButton BuyBTN;
 
-    PassengerMenuController passengerMenuController  = new PassengerMenuController();
+    Menu passengerMenuController  = new Menu();
 
     @FXML
     void initialize() {
