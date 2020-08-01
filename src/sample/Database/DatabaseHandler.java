@@ -340,6 +340,23 @@ public class DatabaseHandler extends Config {
     }
 
 
+    public void UpdatePassengerPassword(String password , int id){
+
+        String query = "UPDATE passenger SET password = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, password);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
     public void UpdatePassenger(int id , String FirstName , String LastName , String username , String Password , String phone , String Email , double credit , int flightId){

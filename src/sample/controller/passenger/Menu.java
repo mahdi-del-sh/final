@@ -48,7 +48,7 @@ public class Menu {
         });
 
         ProfileManagementBTN.setOnAction(event -> {
-             loginMenuController.ChangeWindow(ProfileManagementBTN , "/sample/view/passenger/passengerPanel/PassengerProfile.fxml" , "Profile Management");
+             loginMenuController.ChangeWindow(ProfileManagementBTN , "/sample/view/passenger/Profile/PassengerProfile.fxml", "Profile Management");
         });
 
         SendMessageToManagerBTN.setOnAction(event -> {

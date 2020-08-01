@@ -42,9 +42,7 @@ public class Test {
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection =  databaseHandler.getConnection();
 
-        System.out.println(databaseHandler.ReadEmployee().get(0).getUserName());
-        System.out.println(databaseHandler.ReadEmployee().get(2).getUserName());
-        System.out.println(databaseHandler.ReadEmployee().get(1).getUserName());
+databaseHandler.UpdatePassengerPassword("qqqqqqqqqqqqqqqq" , 30005);
 
       //  databaseHandler.AddPassenger("kamran" , "WEdewd" , "dwedwed" , "e32e" , "0195823486952" , 2536.25 , "rewfrewfwerf");
 

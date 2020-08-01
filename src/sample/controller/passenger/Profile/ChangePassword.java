@@ -1,13 +1,14 @@
-package sample.controller.manager.Profile;
+package sample.controller.passenger.Profile;
 
 import com.jfoenix.controls.JFXButton;
-
+import com.jfoenix.controls.JFXTextField;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Paint;
@@ -15,9 +16,15 @@ import sample.Database.DatabaseHandler;
 import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
 import sample.controller.manager.login;
+import sample.controller.passenger.Login;
 
 public class ChangePassword {
 
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
 
     @FXML
     private JFXButton HomeBTN;
@@ -38,9 +45,14 @@ public class ChangePassword {
 
     @FXML
     void initialize() {
+
         PasswordTXF.setUnFocusColor(Paint.valueOf("#4059a9"));
         ConfirmPasswordTXF.setUnFocusColor(Paint.valueOf("#4059a9"));
         ErrorLBL.setText("");
+
+        HomeBTN.setOnAction(event -> {
+            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/passenger/Profile/PassengerProfile.fxml", "Profile Management");
+        });
 
 
         ConfirmBTN.setOnAction(event -> {
@@ -92,9 +104,11 @@ public class ChangePassword {
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
-                        login managerLogInController1 = new login();
 
-                        databaseHandler.UpdateManagerPassword(PasswordTXF.getText() ,managerLogInController1.IdManager );
+                        Login login = new Login();
+
+                        databaseHandler.UpdatePassengerPassword(PasswordTXF.getText() ,login.IdManager );
+                        System.out.println(login.IdManager);
 
                         ErrorLBL.setText("Password Changed Successfully");
 
@@ -120,13 +134,7 @@ public class ChangePassword {
 
         });
 
-        HomeBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/Profile/ChnageProfile.fxml", "Profile Management");
-        });
-
-
     }
-
 
     public boolean CheckPass(String password){
         boolean flag = false;
@@ -143,7 +151,6 @@ public class ChangePassword {
             flag = true;
         }
 
-return flag;
+        return flag;
     }
-
 }
