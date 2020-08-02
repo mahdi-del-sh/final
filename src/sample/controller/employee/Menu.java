@@ -46,7 +46,7 @@ public class Menu {
         });
 
         FlightManagementBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(SendMessageToManagementBTN , "/sample/view/employee/panel/EmployeeFlight.fxml", "Employee Flight");
+            loginMenuController.ChangeWindow(SendMessageToManagementBTN , "/sample/view/employee/Flight/EmployeeFlight.fxml", "Employee Flight");
 
         });
 

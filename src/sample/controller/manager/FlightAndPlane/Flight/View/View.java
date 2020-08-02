@@ -56,6 +56,10 @@ public class View {
 
     @FXML private TableColumn<Flight , String> PassengerColumn;
 
+
+    @FXML
+    private JFXButton ShowPassengerList;
+
     @FXML
     private JFXButton HomeBTN;
 
@@ -70,6 +74,8 @@ public class View {
 
     @FXML
     private Label Label;
+
+   public static int flightId ;
 
     ArrayList<Flight> changes = new ArrayList<>();
     LoginMenuController loginMenuController = new LoginMenuController();
@@ -123,6 +129,17 @@ public class View {
             stage.setScene(new Scene(root));
             stage.show();
 
+        });
+
+
+        ShowPassengerList.setOnAction(event -> {
+            if(tableView.getSelectionModel().isEmpty()){
+                Label.setText("Choose a row");
+            }
+            else{
+                flightId = tableView.getSelectionModel().getSelectedItem().getId();
+                loginMenuController.ChangeWindow(ShowPassengerList , "/sample/view/manager/FlightAndPlane/Flight/View/PassengerList.fxml" , "Passenger List");
+            }
         });
 
         //set up the columns in table :

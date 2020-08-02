@@ -69,12 +69,17 @@
                               <TableColumn fx:id="PassengerColumn" prefWidth="440.6666463216145" text="Passenger List " />
                           </columns>
                         </TableView>
-                        <Label fx:id="Label" layoutX="376.0" layoutY="604.0" prefHeight="58.0" prefWidth="533.0" textFill="#068c12">
+                        <Label fx:id="Label" layoutX="239.0" layoutY="604.0" prefHeight="58.0" prefWidth="533.0" textFill="#068c12">
                            <font>
                               <Font name="System Bold" size="23.0" />
                            </font>
                         </Label>
                         <JFXButton fx:id="Ticket" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="123.0" layoutY="617.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Ticket">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="ShowPassengerList" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="784.0" layoutY="617.0" prefHeight="37.0" prefWidth="193.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Show Passenger List">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>

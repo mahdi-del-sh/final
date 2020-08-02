@@ -39,6 +39,9 @@ public class View {
     private JFXButton HomeBTN;
 
     @FXML
+    private JFXButton FlightList;
+
+    @FXML
     private Label ErrorLBL;
 
     @FXML
@@ -50,11 +53,22 @@ public class View {
     HashMap<Integer , Integer> changes = new HashMap<>();
 
 
+    public static int PlaneId;
+
 LoginMenuController loginMenuController = new LoginMenuController();
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
 
+        FlightList.setOnAction(event -> {
+            if(tableView.getSelectionModel().isEmpty()){
+                ErrorLBL.setText("Select Row");
+            }
+            else {
+                PlaneId = tableView.getSelectionModel().getSelectedItem().getId();
+                loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/FlightAndPlane/Plane/View/FlightList.fxml" , "Flight List");
+            }
+        });
 
         HomeBTN.setOnAction(event -> {
             loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/FlightAndPlane/Panel.fxml", "Flight And Plane Management");

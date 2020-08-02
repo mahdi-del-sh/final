@@ -1,4 +1,4 @@
-package sample.controller.employee.panel;
+package sample.controller.employee.Flight;
 
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
