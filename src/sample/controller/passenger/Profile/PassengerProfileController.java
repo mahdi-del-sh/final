@@ -95,7 +95,7 @@ public class PassengerProfileController {
                 }
 
                 databaseHandler.UpdatePassenger(login.IdManager , FirstNameTXF.getText() , LastnameTXF.getText() , UsernameTXF.getText() , password  , PhoneTXF.getText()  , EmailTXF.getText() , credit  );
-EmailLBL.setText("Changed Successfully!");
+                EmailLBL.setText("Changed Successfully!");
             }
 
         });

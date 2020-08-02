@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import sample.controller.LoginMenuController;
-import sample.controller.employee.EmployeeMenuController;
+import sample.controller.employee.Menu;
 
 public class EmployeeMessagesController {
 
@@ -29,7 +29,7 @@ public class EmployeeMessagesController {
     @FXML
     private JFXTextArea MessageTXA;
 
-    EmployeeMenuController employeeMenuController =  new EmployeeMenuController();
+    Menu employeeMenuController =  new Menu();
     LoginMenuController loginMenuController = new LoginMenuController();
 
     @FXML

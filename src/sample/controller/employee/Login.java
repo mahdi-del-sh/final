@@ -20,7 +20,7 @@ import sample.Database.DatabaseHandler;
 import sample.animations.Shaker;
 import sample.controller.LoginMenuController;
 
-public class EmployeeLogInController {
+public class Login {
     static boolean username = false;
 
     @FXML
@@ -46,6 +46,7 @@ public class EmployeeLogInController {
 
     @FXML
     private JFXButton EnterBTN;
+    public static int PassengerId ;
 
     @FXML
     void initialize() {
@@ -155,6 +156,7 @@ public class EmployeeLogInController {
         for(int i = 0 ; i < databaseHandler.ReadEmployee().size() ; i++){
             if(databaseHandler.ReadEmployee().get(i).getUserName().equals(userName) && databaseHandler.ReadEmployee().get(i).getPassword().equals(Password)){
                 flag = true;
+                PassengerId = databaseHandler.ReadEmployee().get(i).getId();
             }
         }
 

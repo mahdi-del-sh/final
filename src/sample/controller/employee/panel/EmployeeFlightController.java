@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import sample.controller.LoginMenuController;
-import sample.controller.employee.EmployeeMenuController;
+import sample.controller.employee.Menu;
 
 public class EmployeeFlightController {
 
@@ -34,7 +34,7 @@ public class EmployeeFlightController {
     private JFXButton ViewPassengersBTN;
 
     LoginMenuController loginMenuController =  new LoginMenuController();
-    EmployeeMenuController passengerMenuController =  new EmployeeMenuController();
+    Menu passengerMenuController =  new Menu();
 
     @FXML
     void initialize() {

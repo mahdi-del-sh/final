@@ -652,6 +652,30 @@ String Message = "" ;
 
     }
 
+    public void UpdateEmployee(String firstname , String lastname , String username , String Phone , String Address , double Salary , String Email , int id)throws SQLException{
+
+        String query = "UPDATE employee SET name = ? , lastname = ? , username = ? , phonenumber = ? , address = ? , email = ? , salary = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, firstname);
+            preparedStatement.setString(2, lastname );
+            preparedStatement.setString(3, username );
+            preparedStatement.setString(4, Phone    );
+            preparedStatement.setString(5, Address  );
+            preparedStatement.setString(6, Email    );
+            preparedStatement.setDouble(7 , Salary  );
+            preparedStatement.setInt   (8, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     //plane :
     public void AddPlane(int capacity) throws SQLException {

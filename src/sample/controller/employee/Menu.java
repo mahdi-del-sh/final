@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.controller.LoginMenuController;
 
-public class EmployeeMenuController {
+public class Menu {
 
 
     @FXML
@@ -38,7 +38,7 @@ public class EmployeeMenuController {
         });
 
         PersonalProfileManagementBTN.setOnAction(event -> {
-            loginMenuController.ChangeWindow(PersonalProfileManagementBTN , "/sample/view/employee/panel/EmployeeProfile.fxml", "Employee Profile");
+            loginMenuController.ChangeWindow(PersonalProfileManagementBTN , "/sample/view/employee/Profile/Profile.fxml", "Employee Profile");
         });
 
         SendMessageToManagementBTN.setOnAction(event -> {
