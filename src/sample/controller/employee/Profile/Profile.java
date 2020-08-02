@@ -73,6 +73,7 @@ public class Profile {
     void initialize() throws SQLException, ClassNotFoundException {
 
         ChangePasswordBTN.setOnAction(event -> {
+            loginMenuController.ChangeWindow(ChangePasswordBTN , "/sample/view/employee/Profile/Password.fxml", "Change Password");
 
 
         });

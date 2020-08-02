@@ -592,6 +592,25 @@ public class DatabaseHandler extends Config {
 
     }
 
+    public void updateEmployeePassword(String password , int id){
+
+        String query = "UPDATE employee SET password = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, password);
+            preparedStatement.setInt   (2, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
     public void UpdateEmployeeSalary(double salary , int id){
 
         String query = "UPDATE employee SET salary = ?"
