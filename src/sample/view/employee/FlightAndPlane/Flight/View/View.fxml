@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.employee.FlightAndPlane.Flight.View.View">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="5.0" prefHeight="475.0" prefWidth="606.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane accessibleRole="BUTTON" layoutX="-9.0" layoutY="-6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1249.0" style="-fx-background-color: #a7c0cd;">
+                     <children>
+                        <AnchorPane prefHeight="30.0" prefWidth="1247.0" style="-fx-background-color: #4b636e;" />
+                        <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="1249.0" style="-fx-background-color: #78909c;">
+                           <children>
+                              <ImageView fitHeight="61.0" fitWidth="58.0" layoutX="638.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../assets/icons8-employee-80.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="350.0" layoutY="12.0" prefHeight="46.0" prefWidth="256.0" text="View/Edit/Delete">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="721.0" layoutY="12.0" prefHeight="46.0" prefWidth="177.0" text="Flights">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Group layoutX="13.0" layoutY="133.0" />
+                        <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="23.0" layoutY="616.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="Delete" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="1111.0" layoutY="615.0" prefHeight="37.0" prefWidth="91.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="Confirm" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="998.0" layoutY="616.0" prefHeight="37.0" prefWidth="91.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Confirm">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="tableView" layoutX="26.0" layoutY="116.0" prefHeight="478.0" prefWidth="1195.0">
+                          <columns>
+                            <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="PlaneIdColumn" onEditCommit="#changePlaneIdCellEvent" prefWidth="75.0" text="AirPlaneId" />
+                              <TableColumn fx:id="TicketId" prefWidth="75.0" text="Ticket ID" />
+                              <TableColumn fx:id="OriginColumn" onEditCommit="#changeOriginCellEvent" prefWidth="75.0" text="Origin" />
+                              <TableColumn fx:id="DestinationColumn" onEditCommit="#changeDestinationCellEvent" prefWidth="75.0" text="Destination" />
+                              <TableColumn fx:id="DateColumn" onEditCommit="#changeDateCellEvent" prefWidth="75.0" text="Date" />
+                              <TableColumn fx:id="TimeColumn" onEditCommit="#changeTimeCellEvent" prefWidth="75.0" text="Time" />
+                              <TableColumn fx:id="S_T_NColumn" onEditCommit="#changeS_T_NCellEvent" prefWidth="75.0" text="S_T_N" />
+                              <TableColumn fx:id="DurationColumn" onEditCommit="#changeDurationCellEvent" prefWidth="75.0" text="Duration" />
+                              <TableColumn fx:id="StatusColumn" onEditCommit="#changeStatusCellEvent" prefWidth="75.0" text="Status" />
+                              <TableColumn fx:id="PassengerColumn" prefWidth="440.6666463216145" text="Passenger List " />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="Label" layoutX="239.0" layoutY="604.0" prefHeight="58.0" prefWidth="533.0" textFill="#068c12">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="Ticket" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="123.0" layoutY="617.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Ticket">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="ShowPassengerList" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="784.0" layoutY="617.0" prefHeight="37.0" prefWidth="193.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Show Passenger List">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

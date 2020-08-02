@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.employee.FlightAndPlane.Plane.Add.Add">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a7c0cd;">
+                     <children>
+                        <AnchorPane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #4b636e;" />
+                        <AnchorPane layoutY="30.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #78909c;">
+                           <children>
+                              <ImageView fitHeight="61.0" fitWidth="58.0" layoutX="271.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../assets/icons8-employee-80.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="46.0" layoutY="12.0" prefHeight="46.0" prefWidth="193.0" text="Add">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="354.0" layoutY="12.0" prefHeight="46.0" prefWidth="169.0" text="Plane">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Group layoutX="13.0" layoutY="133.0" />
+                        <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="28.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="CapacityTXF" alignment="CENTER" layoutX="181.0" layoutY="154.0" prefHeight="46.0" prefWidth="237.0" promptText="Enter The Capacity">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="ErrorLBL" alignment="CENTER" layoutX="122.0" layoutY="291.0" prefHeight="84.0" prefWidth="356.0" textFill="#d70000">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="AddBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="501.0" layoutY="336.0" prefHeight="37.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Add">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
