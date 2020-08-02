@@ -610,7 +610,6 @@ public class DatabaseHandler extends Config {
 
     }
 
-
     public void UpdateEmployeeSalary(double salary , int id){
 
         String query = "UPDATE employee SET salary = ?"
@@ -628,7 +627,6 @@ public class DatabaseHandler extends Config {
         }
 
     }
-
 
     public void DeleteEmployeeMessage(int id){
 String Message = "" ;
@@ -686,6 +684,24 @@ String Message = "" ;
             preparedStatement.setString(6, Email    );
             preparedStatement.setDouble(7 , Salary  );
             preparedStatement.setInt   (8, id       );
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void UpdateEmployeeMessage(String Message , int id){
+
+        String query = "UPDATE employee SET message = ?"
+                + "where id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, Message);
+            preparedStatement.setInt   (2, id       );
             preparedStatement.executeUpdate();
             preparedStatement.close();
 
