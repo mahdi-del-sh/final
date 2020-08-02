@@ -444,7 +444,6 @@ public class DatabaseHandler extends Config {
 
         }
 
-
     public void UpdateManagerPassword(String password , int id){
 
         String query = "UPDATE manager SET password = ?"
@@ -874,6 +873,21 @@ String Message = "" ;
         preparedStatement.setInt(3    , flightId);
         preparedStatement.executeUpdate();
 
+    }
+
+    public void DeleteTicketPassenger(int passengerId , int ticketId , int flightId){
+        String query = "DELETE FROM passengerticket where passengerId  = ? AND ticketId = ? AND flightId = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, passengerId);
+            preparedStatement.setInt(2, ticketId);
+            preparedStatement.setInt(3, flightId);
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }

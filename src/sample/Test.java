@@ -50,7 +50,6 @@ public class Test {
 //        System.out.println(databaseHandler.ReadPassengerTicket().get(2).passengerId);
       //  databaseHandler.AddPassenger("kamran" , "WEdewd" , "dwedwed" , "e32e" , "0195823486952" , 2536.25 , "rewfrewfwerf");
 
-databaseHandler.AddTicketPassenger(30000 , 40001 , 60002);
-
+databaseHandler.DeleteTicketPassenger(30000 , 40001 , 60002);
     }
 }

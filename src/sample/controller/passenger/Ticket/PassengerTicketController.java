@@ -32,7 +32,11 @@ public class PassengerTicketController {
         });
 
         BuyBTN.setOnAction(event -> {
-loginMenuController.ChangeWindow(BuyBTN , "/sample/view/passenger/Ticket/BuyTicket.fxml" , "Ticket Management");
+            loginMenuController.ChangeWindow(BuyBTN , "/sample/view/passenger/Ticket/BuyTicket.fxml" , "Ticket Management");
+        });
+
+        CancelBTN.setOnAction(event -> {
+            loginMenuController.ChangeWindow(CancelBTN , "/sample/view/passenger/Ticket/CancelTicket.fxml" , "Cancel Ticket");
         });
 
     }
