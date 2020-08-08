@@ -102,7 +102,7 @@ public class CancelTicket {
 
                 //write to database :
                 databaseHandler.DeleteTicketPassenger(tableView2.getSelectionModel().getSelectedItem().getPassengerId() , tableView2.getSelectionModel().getSelectedItem().getTicketId() , tableView2.getSelectionModel().getSelectedItem().getFlightId());
-
+                label.setText("Ticket has been canceled");
 
             }
         });

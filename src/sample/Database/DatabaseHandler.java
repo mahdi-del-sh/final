@@ -23,6 +23,22 @@ public class DatabaseHandler extends Config {
 
     //Read :
 
+    public String ReadPolicy() throws SQLException{
+        ArrayList<String> policies = new ArrayList<>();
+        String result = "" ;
+
+        String query = "SELECT * from financialpolicy";
+
+        preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()) {
+            policies.add(resultSet.getString("name"));
+        }
+
+        result =  policies.get(policies.size()-1);
+        return result;
+        }
+
     public ArrayList<Manager> ReadManagers() throws SQLException {
         ArrayList<Manager> managers = new ArrayList<>();
 
@@ -507,6 +523,15 @@ public class DatabaseHandler extends Config {
         preparedStatement.setDouble(2 , price);
         preparedStatement.setDouble(3 , penalty);
         preparedStatement.executeUpdate();
+    }
+
+    public void AddPolicy(String policy) throws SQLException {
+
+        String insert = "INSERT INTO financialpolicy(name)"+"VALUES(?)";
+        preparedStatement = connection.prepareStatement(insert);
+        preparedStatement.setString(1 , policy);
+        preparedStatement.executeUpdate();
+
     }
 
     public void DeleteTicket(int id) throws SQLException{

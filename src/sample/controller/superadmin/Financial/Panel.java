@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXCheckBox;
 import com.sun.webkit.dom.CDATASectionImpl;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import org.w3c.dom.CDATASection;
 import sample.Database.DatabaseHandler;
 import sample.Test;
@@ -21,23 +23,58 @@ import sample.model.Ticket;
 public class Panel {
 
 
-    @FXML
-    private JFXButton FirstBTN;
-
-    @FXML
-    private JFXButton SecondBTN;
-
-    @FXML
-    private JFXButton FixedBTN;
 
     @FXML
     private JFXButton HomeBTN;
 
+    @FXML
+    private JFXButton ConfirmBTN;
 
+    @FXML
+    private JFXCheckBox First;
+
+    @FXML
+    private   JFXCheckBox Second;
+
+    @FXML
+    private Label label;
+
+
+
+    DatabaseHandler databaseHandler = new DatabaseHandler();
+    Connection connection =  databaseHandler.getConnection();
+
+    public Panel() throws SQLException, ClassNotFoundException {
+    }
 
 
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
+
+        try {
+            if(databaseHandler.ReadPolicy().equalsIgnoreCase("fixed")){
+                First.setSelected(false);
+                Second.setSelected(false);
+
+            }
+
+            else if(databaseHandler.ReadPolicy().equalsIgnoreCase("first")){
+
+                First.setSelected(true);
+                Second.setSelected(false);
+
+            }
+            else if(databaseHandler.ReadPolicy().equalsIgnoreCase("second")){
+
+                First.setSelected(false);
+                Second.setSelected(true);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
 
         DatabaseHandler databaseHandler = new DatabaseHandler();
@@ -48,209 +85,307 @@ public class Panel {
             superAdminMenuController.BackToSuperAdminMenu(HomeBTN);
         });
 
-        FixedBTN.setOnAction(event -> {
+        ConfirmBTN.setOnAction(event -> {
+            label.setText("");
 
 
-            try {
-                for(Ticket ticket  : databaseHandler.ReadTicket()){
-                databaseHandler.UpdateTicket(ticket.getId() , ticket.getTicketPrice() , (ticket.getPenalty()*4)/5);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+            if(First.isSelected() && Second.isSelected()){
+                label.setText("You can choose one policy");
             }
 
+            else if(!First.isSelected() && !Second.isSelected()){
 
-//**********************************************************************************************************************
+                label.setText("Financial policy : Fixed ");
 
-            try {
-                for(int i : getPass().keySet()){
+                //back it :
+                try {
+                    if(databaseHandler.ReadPolicy().equalsIgnoreCase("first")){
 
-                    if(getPass().get(i) < 5){
-                        databaseHandler.UpdatePassengerCredit(123.23 , 30001);
-                        System.out.println("3");
+                        //Increase 20% Ticket Prices :
+                        DecreaseTicketPrice(120);
+
+                        //Increase Employee salary :
+                        DecreaseEmployeeSalary(120);
+
                     }
 
-                    else{
+                    else if(databaseHandler.ReadPolicy().equalsIgnoreCase("second")){
 
-                        double credit = get3Credit(30001);
-                        int id = i ;
-                      databaseHandler.UpdatePassengerCredit(1233545 , id);
-                        System.out.println("5");
-                        System.out.println(credit);
-//                        System.out.println(get3Credit(i));
-//                        System.out.println(i);
+
+                        //increase 10% ticket price :
+                        IncreaseTicketPrice(110);
+
+                        //increase 10% employee salary :
+
+                        IncreaseEmployeeSalary(110);
+
+                        //decrease 10% manager salary :
+
+                        DecreaseManagerSalary(110);
+
                     }
-
+                } catch (SQLException | ClassNotFoundException e) {
+                    e.printStackTrace();
                 }
 
+                try {
+                    if(!databaseHandler.ReadPolicy().equalsIgnoreCase("fixed")){
+
+                        try {
+                            databaseHandler.AddPolicy("fixed");
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+
             }
 
-            catch (SQLException e) {
-                System.out.println("no");
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                System.out.println("no");
-                e.printStackTrace();
+            else {
+                try {
+                    if(databaseHandler.ReadPolicy().equalsIgnoreCase("first") && First.isSelected()){
+                        label.setText("This policy is already using ");
+                    }
+
+                    else if(databaseHandler.ReadPolicy().equalsIgnoreCase("second") && Second.isSelected()){
+                        label.setText("This policy is already using ");
+                    }
+
+                    else if(First.isSelected() && !databaseHandler.ReadPolicy().equalsIgnoreCase("first")){
+
+                        //Back to the fixed model :
+                        if(databaseHandler.ReadPolicy().equalsIgnoreCase("second")){
+
+                            //increase 10% ticket price :
+                            IncreaseTicketPrice(110);
+
+                            //increase 10% employee salary :
+
+                            IncreaseEmployeeSalary(110);
+
+                            //decrease 10% manager salary :
+
+                            DecreaseManagerSalary(110);
+                        }
+
+
+                        label.setText("Financial Policy : First");
+                        try {
+                            databaseHandler.AddPolicy("first");
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+
+                        //Do the First policy :
+
+                        //Increase 20% Ticket Prices :
+                        IncreaseTicketPrice(120);
+
+                        //Increase Employee salary :
+                        IncreaseEmployeeSalary(120);
+
+                    }
+
+                    else if(Second.isSelected() && !databaseHandler.ReadPolicy().equalsIgnoreCase("second")){
+
+                        //Back to the fixed Policy
+                        if(databaseHandler.ReadPolicy().equalsIgnoreCase("first")){
+
+                            //Decrease 20% ticket price :
+                            DecreaseTicketPrice(120);
+
+                            //Decrease 20% employee price :
+                            DecreaseEmployeeSalary(120);
+
+                        }
+
+                        label.setText("Financial Policy : Second");
+                        try {
+                            databaseHandler.AddPolicy("second");
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+
+
+                        //Do the second  policy :
+
+                        //Decrease 10% ticket price :
+                        DecreaseTicketPrice(110);
+
+                        //Decrease 10% employee salary :
+                        DecreaseEmployeeSalary(110);
+
+                        //Increase 10% manager salary :
+                        IncreaseManagerSalary(110);
+
+                    }
+                } catch (SQLException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
-
-
-
-
 
         });
 
-        SecondBTN.setOnAction(event -> {
 
-            try {
-                decreaseTickets();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
 
-            try {
-                decreaseSalaryPrice();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-
-            try {
-                IncreaseManagerSalary();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-
-        });
-
-        FirstBTN.setOnAction(event -> {
-
-            try {
-                IncreaseTicketPrice();
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-            try {
-                IncreaseSalaryPrice();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-        });
+//        FixedBTN.setOnAction(event -> {
+//
+//
+//            try {
+//                for(Ticket ticket  : databaseHandler.ReadTicket()){
+//                databaseHandler.UpdateTicket(ticket.getId() , ticket.getTicketPrice() , (ticket.getPenalty()*4)/5);
+//                }
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//
+//
+////**********************************************************************************************************************
+//
+//            try {
+//                for(int i : getPass().keySet()){
+//
+//                    if(getPass().get(i) < 5){
+//                        databaseHandler.UpdatePassengerCredit(123.23 , 30001);
+//                        System.out.println("3");
+//                    }
+//
+//                    else{
+//
+//                        double credit = get3Credit(30001);
+//                        int id = i ;
+//                      databaseHandler.UpdatePassengerCredit(1233545 , id);
+//                        System.out.println("5");
+//                        System.out.println(credit);
+////                        System.out.println(get3Credit(i));
+////                        System.out.println(i);
+//                    }
+//
+//                }
+//
+//            }
+//
+//            catch (SQLException e) {
+//                System.out.println("no");
+//                e.printStackTrace();
+//            } catch (ClassNotFoundException e) {
+//                System.out.println("no");
+//                e.printStackTrace();
+//            }
+//
+//
+//
+//
+//
+//
+//        });
+//
+//        SecondBTN.setOnAction(event -> {
+//
+//            try {
+//                decreaseTickets();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//
+//            try {
+//                decreaseSalaryPrice();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//
+//            try {
+//                IncreaseManagerSalary();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//
+//        });
+//
+//        FirstBTN.setOnAction(event -> {
+//
+//            try {
+//                IncreaseTicketPrice();
+//
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//            try {
+//                IncreaseSalaryPrice();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//        });
 
     }
 
-    private void decreaseTickets() throws SQLException, ClassNotFoundException {
+    //Ticket :
+
+    private void IncreaseTicketPrice(int price) throws SQLException, ClassNotFoundException {
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection =  databaseHandler.getConnection();
         for(Ticket ticket : databaseHandler.ReadTicket()){
-            databaseHandler.UpdateTicket(ticket.getId() , ((ticket.getTicketPrice()*10)/11) , ticket.getPenalty());
+            databaseHandler.UpdateTicket(ticket.getId() , ((ticket.getTicketPrice()*price)/100) , ticket.getPenalty());
         }
     }
 
-    private void decreaseSalaryPrice() throws SQLException, ClassNotFoundException {
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-        Connection connection =  databaseHandler.getConnection();
-        for(Employee employee : databaseHandler.ReadEmployee()){
-            databaseHandler.UpdateEmployeeSalary((10 * employee.getSalary()/11) , employee.getId());        }
-    }
-
-
-    private void IncreaseSalaryPrice() throws SQLException, ClassNotFoundException {
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-        Connection connection =  databaseHandler.getConnection();
-        for(Employee employee : databaseHandler.ReadEmployee()){
-databaseHandler.UpdateEmployeeSalary((6 * employee.getSalary()/5) , employee.getId());        }
-    }
-
-    private void IncreaseTicketPrice() throws SQLException, ClassNotFoundException {
+    private void DecreaseTicketPrice(int price) throws SQLException, ClassNotFoundException {
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection =  databaseHandler.getConnection();
         for(Ticket ticket : databaseHandler.ReadTicket()){
-            databaseHandler.UpdateTicket(ticket.getId() , ((ticket.getTicketPrice()*6)/5) , ticket.getPenalty());
+            databaseHandler.UpdateTicket(ticket.getId() , ((ticket.getTicketPrice() * 100 ) / price) , ticket.getPenalty());
         }
     }
 
-    private void IncreaseManagerSalary() throws SQLException, ClassNotFoundException {
+
+    //employee :
+
+    private void IncreaseEmployeeSalary(int price) throws SQLException, ClassNotFoundException {
+        DatabaseHandler databaseHandler = new DatabaseHandler();
+        Connection connection =  databaseHandler.getConnection();
+        for(Employee employee : databaseHandler.ReadEmployee()){
+            databaseHandler.UpdateEmployeeSalary((price * employee.getSalary()) / 100  , employee.getId());        }
+    }
+
+    private void DecreaseEmployeeSalary(int price) throws SQLException, ClassNotFoundException {
+        DatabaseHandler databaseHandler = new DatabaseHandler();
+        Connection connection =  databaseHandler.getConnection();
+        for(Employee employee : databaseHandler.ReadEmployee()){
+            databaseHandler.UpdateEmployeeSalary((100 * employee.getSalary()) / price , employee.getId());        }
+    }
+
+
+    //manager :
+
+    private void IncreaseManagerSalary(int price) throws SQLException, ClassNotFoundException {
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection =  databaseHandler.getConnection();
         for(Manager manager : databaseHandler.ReadManagers()){
-            databaseHandler.UpdateManagerSalary((manager.getSalary()* 11)/10 , manager.getId());
+            databaseHandler.UpdateManagerSalary((manager.getSalary() * price) / 100 , manager.getId());
         }
     }
 
-
-    public int findTekrar(int number , ArrayList<Integer> arrayList){
-        int  j = 0 ;
-
-        for(int i  = 0 ; i < arrayList.size() ; i++){
-            if(arrayList.get(i) == number)
-                j++;
-        }
-
-        return j;
-    }
-
-    public HashMap<Integer , Integer> getPass() throws SQLException, ClassNotFoundException {
-
-        HashMap<Integer , Integer> items =  new HashMap<>();
-
+    private void DecreaseManagerSalary(int price) throws SQLException, ClassNotFoundException {
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection =  databaseHandler.getConnection();
-
-        for(int i = 0 ; i < databaseHandler.PassengerRepeat().size() ; i++){
-
-            if(!items.containsKey(databaseHandler.PassengerRepeat().get(i))){
-
-                if(findTekrar(databaseHandler.PassengerRepeat().get(i) , databaseHandler.PassengerRepeat()) >= 3){
-
-                    items.put(databaseHandler.PassengerRepeat().get(i) , findTekrar(databaseHandler.PassengerRepeat().get(i) , databaseHandler.PassengerRepeat()));
-                }
-            }
+        for(Manager manager : databaseHandler.ReadManagers()){
+            databaseHandler.UpdateManagerSalary((manager.getSalary() * 100) / price , manager.getId());
         }
-
-
-
-
-        return items;
     }
-
-    public double get5Credit(int id) throws SQLException, ClassNotFoundException {
-        double credit = 0;
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-        Connection connection =  databaseHandler.getConnection();
-
-        for(int i = 0 ; i < databaseHandler.ReadPassengers().size() ; i++){
-            if(databaseHandler.ReadPassengers().get(i).getId() == id){
-                credit = (6/5) * databaseHandler.ReadPassengers().get(i).getCredit();
-            }
-        }
-
-        return credit;
-    }
-
-    public double get3Credit(int id) throws SQLException, ClassNotFoundException {
-        double credit = 0;
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-        Connection connection =  databaseHandler.getConnection();
-
-        for(int i = 0 ; i < databaseHandler.ReadPassengers().size() ; i++){
-            if(databaseHandler.ReadPassengers().get(i).getId() == id){
-                credit = (11/10) * databaseHandler.ReadPassengers().get(i).getCredit();
-            }
-        }
-
-        return credit;
-    }
-
 
 
     }

@@ -89,23 +89,25 @@ public class BuyTicket {
 
                             //lower credit :
                             LowerCredit(login.IdManager , tableView1.getSelectionModel().getSelectedItem().getId());
-                            System.out.println("Credit");
+
 
                             //increase S_T_N :
                             increaseSoldTicketNumber(tableView1.getSelectionModel().getSelectedItem().getId() , tableView1.getSelectionModel().getSelectedItem().getId());
-                            System.out.println("S_T_N");
 
 
                             //write to database :
                             databaseHandler.AddTicketPassenger(login.IdManager , getTicketId() , tableView1.getSelectionModel().getSelectedItem().getId() );
-                            System.out.println("database");
+
+                            //check the Discount :
+                                Discount(CheckDiscount(login.IdManager));
+
                         }
-                        else{
-                            System.out.println("No Time");
+                        else{                        label.setText("Flight time interference");
+
                         }
                     }
-                    else {
-                        System.out.println("No capacity");
+                    else {                            label.setText("Complete flight capacity");
+
                     }
 
 
@@ -154,6 +156,42 @@ public class BuyTicket {
 
 
 
+    }
+    public void Discount(int count) throws SQLException, ClassNotFoundException {
+        Login login = new Login();
+        DatabaseHandler databaseHandler = new DatabaseHandler();
+        Connection connection ;
+        connection = databaseHandler.getConnection();
+        double credit =  0;
+
+        for(Passenger passenger : databaseHandler.ReadPassengers()){
+            if (passenger.getId() == login.IdManager){
+                credit = passenger.getCredit();
+            }
+        }
+
+
+        if(count  >= 3 && count < 5 ){
+            databaseHandler.UpdatePassengerCredit((credit*11)/10 , login.IdManager);
+        }
+        else if(count >= 5){
+            databaseHandler.UpdatePassengerCredit((credit*12)/10 , login.IdManager);
+        }
+    }
+
+    private int CheckDiscount(int idManager) throws SQLException, ClassNotFoundException {
+        DatabaseHandler databaseHandler = new DatabaseHandler();
+        Connection connection ;
+        connection = databaseHandler.getConnection();
+        int count = 0  ;
+
+        for(int i =  0 ; i < databaseHandler.ReadPassengerTicket().size() ; i++){
+            if(databaseHandler.ReadPassengerTicket().get(i).getPassengerId() == idManager){
+                count++;
+            }
+        }
+
+        return count;
     }
 
     private int getTicketId() throws SQLException, ClassNotFoundException {

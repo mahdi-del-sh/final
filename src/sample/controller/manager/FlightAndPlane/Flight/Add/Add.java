@@ -185,13 +185,10 @@ public class Add {
                 flags[7] = true;
             }
 
-            if(PlaneIdTXF.getText().equalsIgnoreCase("")){
-                PenaltyLBL.setText("Please Enter Penalty");
-                flags[8] = false;
-            }
-            else {
-                flags[8] = true;
-            }
+
+
+            flags[8] = true;
+
 
             if(PriceTXF.getText().equalsIgnoreCase("")){
                 PriceLBL.setText("Please Enter Price");
@@ -236,20 +233,30 @@ public class Add {
                         }
 
                         Ticket ticket = new Ticket();
-                        ticket.setPenalty(Double.parseDouble(PenaltyTXF.getText()));
+                       // ticket.setPenalty(Double.parseDouble(PenaltyTXF.getText()));
                         ticket.setTicketPrice(Double.parseDouble(PriceTXF.getText()));
                         try {
                             ticket.setId(databaseHandler.newTicketId());
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
+                        double penalty = 0;
+                        if(PenaltyTXF.getText().equalsIgnoreCase("")){
+                            penalty = (Double.parseDouble(PriceTXF.getText())/5) ;
+                        }
+                        else {
+                            penalty = Double.parseDouble(PenaltyTXF.getText());
+                             ticket.setPenalty(Double.parseDouble(PenaltyTXF.getText()));
+
+                        }
 
                         // ticket.setId(databaseHandler.ReadTicket().size()+1);
                         try {
-                            databaseHandler.AddTicket(ticket.getId() , ticket.getTicketPrice() , ticket.getPenalty());
+                            databaseHandler.AddTicket(ticket.getId() , ticket.getTicketPrice() , penalty);
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
+
 
                         try {
                             label.setText("Flight Added !");
@@ -350,13 +357,27 @@ public class Add {
             PriceLBL.setText("Price is Double number");
         }
 
-        if(PenaltyTXF.getText().matches("(\\d+\\.\\d+)")){
+        if(PenaltyTXF.getText().equalsIgnoreCase("")){
+
             flags[9] = true;
+
         }
-        else{
-            flags[9] = false;
-            PenaltyLBL.setText("Penalty is Double number");
+        else {
+
+            if(PenaltyTXF.getText().matches("(\\d+\\.\\d+)")){
+                flags[9] = true;
+            }
+            else{
+                flags[9] = false;
+                PenaltyLBL.setText("Penalty is Double number");
+            }
+
         }
+
+
+
+
+
 
         for(boolean i : flags)
             if (i==false)flag = false;
