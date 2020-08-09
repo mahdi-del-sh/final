@@ -25,11 +25,8 @@ public class Login {
     static boolean username = false ;
     static boolean isManager = false ;
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
+    public static int superAdminId ;
+    public static int idmanager ;
 
     @FXML
     private JFXButton HomeBTN;
@@ -146,11 +143,6 @@ public class Login {
         });
 
 
-
-
-
-
-
     }
 
 
@@ -165,6 +157,8 @@ public class Login {
         for(int i = 0 ; i < databaseHandler.ReadManagers().size() ; i++){
             if(databaseHandler.ReadManagers().get(i).getUserName().equals(userName) && databaseHandler.ReadManagers().get(i).getPassword().equals(Password) && databaseHandler.ReadManagers().get(i).getIsSuperAdmin() != 0){
                 flag = true;
+                superAdminId = databaseHandler.ReadManagers().get(i).getId();
+                idmanager = databaseHandler.ReadManagers().get(i).getIdmanager();
             }
 
 

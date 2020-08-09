@@ -55,7 +55,7 @@ public class Menu {
     public void BackToEmployeeMenu(Node node){
         node.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/sample/view/employee/EmployeeMenu.fxml"));
+        loader.setLocation(getClass().getResource("/sample/view/employee/Menu.fxml"));
         try{
             loader.load();
         }catch (IOException e){

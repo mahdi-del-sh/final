@@ -3,17 +3,50 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Flight/Add/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Flight/Add/Add.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/passenger/Ticket/BuyTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/passenger/Ticket/BuyTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/passenger/Ticket/CancelTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/passenger/Ticket/CancelTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/superadmin/Financial/Panel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/superadmin/Financial/Panel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/Database/DatabaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/Database/DatabaseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/LoginMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/LoginMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/FlightAndPlane/Panel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/FlightAndPlane/Panel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Message/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Message/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Profile/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/employee/Profile/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/Employee/Edit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/Employee/Edit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/Employee/GetUsername.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/Employee/GetUsername.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/Add/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/Add/Add.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/View/FlightList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/View/FlightList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/View/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/manager/FlightAndPlane/Plane/View/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/superadmin/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/superadmin/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/controller/superadmin/Profile/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/controller/superadmin/Profile/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/model/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/model/Passenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/model/Passenger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/employee/EmployeeLogIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/employee/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/employee/EmployeeMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/employee/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/manager/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/passenger/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/passenger/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AirPort/sample/view/superadmin/Profile/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AirPort/sample/view/superadmin/Profile/Profile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Database/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Database/DatabaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/Add/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Flight/Add/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/passenger/Ticket/BuyTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/passenger/Ticket/BuyTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/passenger/Ticket/CancelTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/passenger/Ticket/CancelTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/superadmin/Financial/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/superadmin/Financial/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/superadmin/Financial/Panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/superadmin/Financial/Panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/LoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/LoginMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/employee/FlightAndPlane/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/employee/FlightAndPlane/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/employee/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/employee/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/employee/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/employee/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/employee/Message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/employee/Message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/employee/Profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/employee/Profile/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/Employee/Edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/Employee/Edit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/Employee/GetUsername.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/Employee/GetUsername.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/Add/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/Add/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/View/FlightList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/View/FlightList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/manager/FlightAndPlane/Plane/View/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/passenger/Profile/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/passenger/Profile/ChangePassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/passenger/Valdity/PassengerValidityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/passenger/Valdity/PassengerValidityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/superadmin/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/superadmin/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/superadmin/Profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/superadmin/Profile/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/employee/EmployeeLogIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/employee/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/employee/EmployeeMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/employee/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/manager/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/manager/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/passenger/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/passenger/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/superadmin/Profile/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/superadmin/Profile/Profile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +115,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -109,6 +142,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -302,7 +336,9 @@
       <workItem from="1596100341811" duration="56131000" />
       <workItem from="1596297191135" duration="32601000" />
       <workItem from="1596375997648" duration="36000" />
-      <workItem from="1596622881820" duration="21096000" />
+      <workItem from="1596622881820" duration="24972000" />
+      <workItem from="1596962904211" duration="52000" />
+      <workItem from="1596988810982" duration="3732000" />
     </task>
     <servers />
   </component>
@@ -335,20 +371,20 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="97" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596013430357" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593845426791">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596990166788">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1592501358411" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596990166788" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593845426791" />
     <state x="398" y="145" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595068573463">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="398" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595068573463" />
     <state x="398" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1593857988193" />
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1596263811102">
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1596914400998">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596263811102" />
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596914400998" />
     <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1595932485239" />
     <state x="438" y="227" width="404" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593943764078">
       <screen x="0" y="0" width="1280" height="680" />
@@ -376,50 +412,50 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="475" y="241" width="355" height="199" key="Github.CreateGistDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595999143313" />
-    <state width="395" height="553" key="GridCell.Tab.0.bottom" timestamp="1596908405857">
+    <state width="742" height="553" key="GridCell.Tab.0.bottom" timestamp="1596992619699">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="395" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596908405857" />
+    <state width="742" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596992619699" />
     <state width="305" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1596183192905" />
-    <state width="885" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596296696247" />
-    <state width="395" height="553" key="GridCell.Tab.0.center" timestamp="1596908405856">
+    <state width="395" height="553" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596953573649" />
+    <state width="742" height="553" key="GridCell.Tab.0.center" timestamp="1596992619699">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="395" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596908405856" />
+    <state width="742" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596992619699" />
     <state width="305" height="553" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1596183192904" />
-    <state width="885" height="553" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1596296696247" />
-    <state width="395" height="553" key="GridCell.Tab.0.left" timestamp="1596908405856">
+    <state width="395" height="553" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1596953573649" />
+    <state width="742" height="553" key="GridCell.Tab.0.left" timestamp="1596992619699">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="395" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596908405856" />
+    <state width="742" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596992619699" />
     <state width="305" height="553" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1596183192904" />
-    <state width="885" height="553" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1596296696247" />
-    <state width="395" height="553" key="GridCell.Tab.0.right" timestamp="1596908405856">
+    <state width="395" height="553" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1596953573649" />
+    <state width="742" height="553" key="GridCell.Tab.0.right" timestamp="1596992619699">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="395" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596908405856" />
+    <state width="742" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596992619699" />
     <state width="305" height="553" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1596183192904" />
-    <state width="885" height="553" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1596296696247" />
-    <state width="1237" height="57" key="GridCell.Tab.1.bottom" timestamp="1596694583200">
+    <state width="395" height="553" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1596953573649" />
+    <state width="1237" height="57" key="GridCell.Tab.1.bottom" timestamp="1596953573646">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="57" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596694583200" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596296696231" />
-    <state width="1237" height="57" key="GridCell.Tab.1.center" timestamp="1596694583200">
+    <state width="1237" height="57" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596953573646" />
+    <state width="1237" height="57" key="GridCell.Tab.1.center" timestamp="1596953573646">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="57" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596694583200" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1596296696231" />
-    <state width="1237" height="57" key="GridCell.Tab.1.left" timestamp="1596694583200">
+    <state width="1237" height="57" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1596953573646" />
+    <state width="1237" height="57" key="GridCell.Tab.1.left" timestamp="1596953573646">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="57" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596694583200" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1596296696231" />
-    <state width="1237" height="57" key="GridCell.Tab.1.right" timestamp="1596694583200">
+    <state width="1237" height="57" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1596953573646" />
+    <state width="1237" height="57" key="GridCell.Tab.1.right" timestamp="1596953573646">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="57" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596694583200" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1596296696231" />
+    <state width="1237" height="57" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1596953573646" />
     <state x="435" y="64" key="RollbackChangesDialog" timestamp="1595760742373">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -476,15 +512,20 @@
       <screen x="1920" y="0" width="1280" height="680" />
     </state>
     <state x="1920" y="0" width="1251" height="665" maximized="true" key="dock-window-9/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596100686132" />
-    <state x="91" y="0" key="new project wizard" timestamp="1596376033915">
+    <state x="91" y="0" key="new project wizard" timestamp="1596962926758">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="91" y="0" key="new project wizard/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596376033915" />
     <state x="2011" y="0" key="new project wizard/0.0.1280.680/1920.0.1280.680@1920.0.1280.680" timestamp="1594019907056" />
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1596962926758" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1595091698916">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1595091698916" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1596990131012">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1596990131012" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

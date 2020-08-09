@@ -21,7 +21,6 @@ public class PassengerValidityController {
     @FXML
     private JFXButton HomeBTN;
 
-
     @FXML
     private JFXTextField CreditTXF;
 

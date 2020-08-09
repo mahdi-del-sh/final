@@ -52,10 +52,16 @@ public class View {
 
     HashMap<Integer , Integer> changes = new HashMap<>();
 
+    DatabaseHandler databaseHandler = new DatabaseHandler();
+    Connection connection = databaseHandler.getConnection();
 
     public static int PlaneId;
 
 LoginMenuController loginMenuController = new LoginMenuController();
+
+    public View() throws SQLException, ClassNotFoundException {
+    }
+
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
@@ -119,9 +125,6 @@ LoginMenuController loginMenuController = new LoginMenuController();
         tableView.setItems(getPlanes());
 
         tableView.setEditable(true);
-        //TextFieldTableCell.<BMIRecord, Number>forTableColumn(new NumberStringConverter())
-        //age.setCellValueFactory(new Callback<CellDataFeatures<Person, Number>, ObservableValue<Number>>() {
-
 
         CapacityColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
 
@@ -160,10 +163,6 @@ LoginMenuController loginMenuController = new LoginMenuController();
 
             selectedRows = tableView.getSelectionModel().getSelectedItems();
 
-            DatabaseHandler databaseHandler = new DatabaseHandler();
-            Connection connection ;
-            connection = databaseHandler.getConnection();
-
             databaseHandler.DeletePlane(tableView.getSelectionModel().getSelectedItem().getIdplane());
 for (Airplane airplane : selectedRows)
     allPlanes.remove(airplane);
@@ -174,9 +173,6 @@ for (Airplane airplane : selectedRows)
     private ObservableList<Airplane> getPlanes() throws SQLException, ClassNotFoundException {
 
         ObservableList<Airplane> Planes = FXCollections.observableArrayList();
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-        Connection connection ;
-        connection = databaseHandler.getConnection();
 
         for(Airplane airplane : databaseHandler.ReadPlanes()){
           //  airplane.SetFlightListString();

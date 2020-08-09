@@ -21,12 +21,6 @@ import sample.controller.passenger.Login;
 public class ChangePassword {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private JFXButton HomeBTN;
 
     @FXML

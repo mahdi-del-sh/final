@@ -2,11 +2,10 @@ package sample.controller.employee.Message;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
-import java.net.URL;
+
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import sample.Database.DatabaseHandler;
@@ -14,7 +13,6 @@ import sample.controller.LoginMenuController;
 import sample.controller.employee.Login;
 import sample.controller.employee.Menu;
 import sample.model.Employee;
-import sample.model.Passenger;
 
 public class Message {
 
@@ -44,7 +42,7 @@ Menu menu = new Menu();
 
         HomeBTN.setOnAction(event -> {
 
-            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/employee/EmployeeMenu.fxml" , "");
+            loginMenuController.ChangeWindow(HomeBTN , "/sample/view/employee/Menu.fxml", "");
 
         });
 

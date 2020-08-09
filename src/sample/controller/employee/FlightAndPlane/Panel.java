@@ -27,7 +27,7 @@ public class Panel {
     void initialize() {
      HomeBTN.setOnAction(event -> {
          menu managerMenuController =  new menu();
-         loginMenuController.ChangeWindow(HomeBTN , "/sample/view/employee/EmployeeMenu.fxml" , "");
+         loginMenuController.ChangeWindow(HomeBTN , "/sample/view/employee/Menu.fxml", "");
      });
 
 

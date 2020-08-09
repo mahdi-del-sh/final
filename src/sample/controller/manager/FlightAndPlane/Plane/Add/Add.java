@@ -29,7 +29,14 @@ public class Add {
     @FXML
     private JFXButton AddBTN;
 
+    DatabaseHandler databaseHandler = new DatabaseHandler();
+    Connection connection = databaseHandler.getConnection();
+
     LoginMenuController loginMenuController = new LoginMenuController();
+
+    public Add() throws SQLException, ClassNotFoundException {
+    }
+
     @FXML
     void initialize() {
 
@@ -44,20 +51,13 @@ public class Add {
 
                 if (CheckCapacity()) {
 
-                    DatabaseHandler databaseHandler = new DatabaseHandler();
-                    Connection connection;
-                    try {
-                        connection = databaseHandler.getConnection();
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+
 
                     try {
                         databaseHandler.AddPlane(Integer.parseInt(CapacityTXF.getText()));
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                        System.out.println("Enter a number");
+                        ErrorLBL.setText("Enter a number");
                     }
 
                     ErrorLBL.setText("Plane Added successfully");

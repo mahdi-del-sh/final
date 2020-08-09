@@ -48,7 +48,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="495.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
+            <JFXButton fx:id="EnterBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="491.0" layoutY="336.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Enter">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

@@ -88,6 +88,9 @@ public class DatabaseHandler extends Config {
         passenger.setCredit(resultSet.getDouble(8));
         passenger.setEmail(resultSet.getString(9));
         passenger.setMessage(resultSet.getString(10));
+
+
+
             passengers.add(passenger);
         }
         return passengers;
@@ -114,6 +117,7 @@ public class DatabaseHandler extends Config {
             employee.setEmail(resultSet.getString(9));
             employee.setSalary(resultSet.getDouble(10));
             employee.setMessage(resultSet.getString(11));
+
 
 
             employees.add(employee);
@@ -568,7 +572,7 @@ public class DatabaseHandler extends Config {
 
     public void AddEmployee(String firstname , String lastname , String username , String Phone , String Address , double Salary , String Email , String Password ) throws SQLException {
                 int id = ReadEmployee().size() + 20000;
-            String insert = "INSERT INTO employee(id,name,lastname,username,password,phonenumber,address,email,salary)"+"VALUES(?,?,?,?,?,?,?,?,?)";
+            String insert = "INSERT INTO employee(id,name,lastname,username,password,phonenumber,address,email,salary,message)"+"VALUES(?,?,?,?,?,?,?,?,?,?)";
             preparedStatement = connection.prepareStatement(insert);
             preparedStatement.setInt(1    , id);
             preparedStatement.setString(2 , firstname);
@@ -579,6 +583,7 @@ public class DatabaseHandler extends Config {
             preparedStatement.setString(7 , Address);
             preparedStatement.setString(8 , Email);
             preparedStatement.setDouble(9 , Salary);
+            preparedStatement.setString(10 , "");
 
             preparedStatement.executeUpdate();
         }

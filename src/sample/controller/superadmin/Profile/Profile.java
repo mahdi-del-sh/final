@@ -8,6 +8,7 @@ import sample.Database.DatabaseHandler;
 import sample.controller.LoginMenuController;
 import sample.controller.manager.login;
 import sample.controller.manager.menu;
+import sample.controller.superadmin.Login;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -65,8 +66,8 @@ LoginMenuController loginMenuController = new LoginMenuController();
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
-        login managerLogInController1 = new login();
-        SetProfile(managerLogInController1.IdManager);
+        Login managerLogInController1 = new Login();
+        SetProfile(managerLogInController1.superAdminId);
 
         HomeBTN.setOnAction(event -> {
             loginMenuController.ChangeWindow(HomeBTN , "/sample/view/superadmin/Menu.fxml" , "SuperAdmin Menu");
@@ -95,7 +96,8 @@ LoginMenuController loginMenuController = new LoginMenuController();
                 }
 
                 try {
-                    databaseHandler.updateManagers(FirstNameTXF.getText() , LastnameTXF.getText() , UsernameTXF.getText() , PhoneTXF.getText() , AddressTXF.getText() , EmailTXF.getText() , managerLogInController1.IdManager);
+                    databaseHandler.updateManagers(FirstNameTXF.getText() , LastnameTXF.getText() , UsernameTXF.getText() , PhoneTXF.getText() , AddressTXF.getText() , EmailTXF.getText() , managerLogInController1.idmanager);
+                    EmailLBL.setText("Change successfully !");
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -112,12 +114,14 @@ LoginMenuController loginMenuController = new LoginMenuController();
 
     public void SetProfile(int id) throws SQLException, ClassNotFoundException {
 
+        System.out.println(id);
+
         DatabaseHandler databaseHandler = new DatabaseHandler();
         Connection connection ;
         connection = databaseHandler.getConnection();
 
         for (int i = 0 ; i < databaseHandler.ReadManagers().size() ; i++ ){
-            if(databaseHandler.ReadManagers().get(i).getIdmanager() == id){
+            if(databaseHandler.ReadManagers().get(i).getId() == id){
 
                 FirstNameTXF.setText(databaseHandler.ReadManagers().get(i).getName());
                 LastnameTXF.setText(databaseHandler.ReadManagers().get(i).getLastName());

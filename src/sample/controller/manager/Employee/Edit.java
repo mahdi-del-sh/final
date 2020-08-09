@@ -71,7 +71,8 @@ public class Edit {
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
         login managerLogInController1 = new login();
-        SetProfile(managerLogInController1.IdManager);
+        GetUsername getUsername = new GetUsername();
+        SetProfile(getUsername.EmployeeId);
 
         HomeBTN.setOnAction(event -> {
             loginMenuController.ChangeWindow(HomeBTN , "/sample/view/manager/Employee/Panel.fxml", "Employee management");
@@ -175,7 +176,7 @@ public class Edit {
         connection = databaseHandler.getConnection();
 
         for (int i = 0 ; i < databaseHandler.ReadEmployee().size() ; i++ ){
-            if(databaseHandler.ReadEmployee().get(i).getIdEmployee() == id){
+            if(databaseHandler.ReadEmployee().get(i).getId() == id){
 
                 FirstNameTXF.setText(databaseHandler.ReadEmployee().get(i).getName());
                 LastnameTXF.setText(databaseHandler.ReadEmployee().get(i).getLastName());

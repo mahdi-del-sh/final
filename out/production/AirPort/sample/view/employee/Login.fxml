@@ -33,7 +33,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="55.0" layoutY="298.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
+            <JFXButton fx:id="HomeBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="42.0" layoutY="349.0" prefHeight="30.0" prefWidth="71.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="HOME">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -58,11 +58,6 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <JFXButton fx:id="ForgetPassBTN" accessibleRole="DATE_PICKER" buttonType="RAISED" layoutX="36.0" layoutY="352.0" prefHeight="37.0" prefWidth="109.0" ripplerFill="#c1d5e0" style="-fx-background-color: #90a4ae;" text="Forget Pass">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </JFXButton>
          </children>
       </AnchorPane>
    </children>

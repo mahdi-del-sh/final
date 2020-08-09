@@ -40,7 +40,7 @@ public class LoginMenuController {
         });
 
         employeeLoginBTN.setOnAction(event -> {
-            ChangeWindow(employeeLoginBTN, "/sample/view/employee/EmployeeLogIn.fxml" , "Employee Login"  );
+            ChangeWindow(employeeLoginBTN, "/sample/view/employee/Login.fxml", "Employee Login"  );
         });
 
         passengerLoginBTN.setOnAction(event -> {

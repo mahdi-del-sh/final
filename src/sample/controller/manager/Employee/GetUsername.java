@@ -27,6 +27,7 @@ public class GetUsername {
     @FXML
     private JFXButton NextBTN;
     static int id ;
+    public static int EmployeeId ;
     LoginMenuController loginMenuController = new LoginMenuController();
 
 
@@ -76,6 +77,7 @@ public class GetUsername {
             if(databaseHandler.ReadEmployee().get(i).getUserName().equals(UserNameTXF.getText())){
                 flag = true;
                 id = databaseHandler.ReadEmployee().get(i).getIdEmployee();
+                EmployeeId = databaseHandler.ReadEmployee().get(i).getId() ;
             }
         }
 

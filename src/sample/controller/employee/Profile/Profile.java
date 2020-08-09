@@ -2,10 +2,9 @@ package sample.controller.employee.Profile;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import java.net.URL;
+
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -83,7 +82,7 @@ public class Profile {
 
 
         HomeBTN.setOnAction(event -> {
-loginMenuController.ChangeWindow(HomeBTN , "/sample/view/employee/EmployeeMenu.fxml" , "Employee Management");
+loginMenuController.ChangeWindow(HomeBTN , "/sample/view/employee/Menu.fxml", "Employee Management");
         });
 
         ConfirmBTN.setOnAction(event -> {

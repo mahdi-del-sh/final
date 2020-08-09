@@ -14,7 +14,8 @@ private String Address;
 private String Email;
 private double salary;
 
-private int isSuperAdmin = 0;
+
+    private int isSuperAdmin = 0;
 
     public int getIdmanager() {
         return idmanager;

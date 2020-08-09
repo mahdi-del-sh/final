@@ -80,8 +80,6 @@ public class FlightList {
             stage.show();
 
 
-//loginMenuController.ChangeWindow(Ticket , "/sample/view/manager/FlightAndPlane/Plane/View/Ticket.fxml" , "Ticket management");
-
         });
 
         HomeBTN.setOnAction(event -> {

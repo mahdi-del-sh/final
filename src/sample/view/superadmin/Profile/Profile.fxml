@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.superadmin.Profile.Profile">
    <children>
       <AnchorPane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="626.0" style="-fx-background-color: #a7c0cd;">
@@ -110,32 +109,32 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="EmailLBL" layoutX="140.0" layoutY="447.0" prefHeight="58.0" prefWidth="329.0">
+            <Label fx:id="EmailLBL" alignment="CENTER" layoutX="140.0" layoutY="447.0" prefHeight="58.0" prefWidth="329.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="AddressLBL" layoutX="160.0" layoutY="350.0" prefHeight="58.0" prefWidth="329.0">
+            <Label fx:id="AddressLBL" alignment="CENTER" layoutX="160.0" layoutY="350.0" prefHeight="58.0" prefWidth="329.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="LastnameLBL" layoutX="39.0" layoutY="254.0" prefHeight="58.0" prefWidth="275.0">
+            <Label fx:id="LastnameLBL" alignment="CENTER" layoutX="39.0" layoutY="254.0" prefHeight="58.0" prefWidth="275.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="PhoneLBL" layoutX="338.0" layoutY="254.0" prefHeight="58.0" prefWidth="275.0">
+            <Label fx:id="PhoneLBL" alignment="CENTER" layoutX="338.0" layoutY="254.0" prefHeight="58.0" prefWidth="275.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="FirstnameLBL" layoutX="33.0" layoutY="159.0" prefHeight="58.0" prefWidth="275.0">
+            <Label fx:id="FirstnameLBL" alignment="CENTER" layoutX="33.0" layoutY="159.0" prefHeight="58.0" prefWidth="275.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="UserNameLBL" layoutX="319.0" layoutY="156.0" prefHeight="58.0" prefWidth="275.0">
+            <Label fx:id="UserNameLBL" alignment="CENTER" layoutX="319.0" layoutY="156.0" prefHeight="58.0" prefWidth="275.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
